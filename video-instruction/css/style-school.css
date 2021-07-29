@@ -401,6 +401,20 @@ body.lock {
   margin: 0px 0px 0px 0px;
 }
 
+.capabilities__body {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.capabilities__column {
+  flex: 0 1 50%;
+  padding: 0 15px;
+}
+@media (max-width: 768px) {
+  .capabilities__column {
+    flex: 1 1 100%;
+  }
+}
 .capabilities__text {
   padding-bottom: 30px;
   padding-left: 65px;
@@ -417,9 +431,6 @@ body.lock {
     padding-bottom: 15px;
     padding-left: 50px;
   }
-}
-.capabilities__text:last-child {
-  padding-bottom: 10px;
 }
 
 .program__text {
