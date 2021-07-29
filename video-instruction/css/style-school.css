@@ -5,23 +5,32 @@ body.lock {
   overflow: hidden;
 }
 
-.wrapper {
-  margin: 0px 0px 110px 0px;
+.wrapper-online-school {
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .wrapper-online-school {
+    padding: 0;
+  }
+}
+
+.wrapper-block {
+  margin: 0px 0px 80px 0px;
 }
 @media (max-width: 992px) {
-  .wrapper {
-    margin: 0px 0px 80px 0px;
+  .wrapper-block {
+    margin: 0px 0px 60px 0px;
   }
 }
 @media (max-width: 768px) {
-  .wrapper {
+  .wrapper-block {
     margin: 0px 0px 40px 0px;
   }
 }
 
 .heading {
   margin: 0px 0px 40px 0px;
-  font-size: 40px;
+  font-size: 30px;
   color: #070707;
   font-weight: 700;
   line-height: 1.3;
@@ -30,15 +39,16 @@ body.lock {
 .heading span {
   color: #188B30;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .heading {
     margin: 0px 0px 30px 0px;
-    font-size: 35px;
+    font-size: 26px;
   }
 }
 @media (max-width: 565px) {
   .heading {
-    font-size: 30px;
+    font-size: 24px;
+    margin: 0px 0px 15px 0px;
   }
 }
 
@@ -54,6 +64,9 @@ body.lock {
 
 .text {
   font-size: 18px;
+}
+.text_green {
+  color: #188B30;
 }
 @media (max-width: 565px) {
   .text {
@@ -342,7 +355,7 @@ body.lock {
 }
 @media (max-width: 565px) {
   .learning__column {
-    padding: 45px 20px 20px 20px;
+    padding: 25px 20px 20px 20px;
   }
 }
 .learning__item {
@@ -517,63 +530,109 @@ body.lock {
   }
 }
 
-.submit {
-  margin: 0px 0px 120px 0px;
-  padding: 40px 0;
-  background-color: #88BBE6;
-  border-radius: 23px;
-  position: relative;
-  height: 590px;
-}
-.submit__section {
-  background-color: #F5F5F5;
-  border-radius: 23px;
-  padding: 40px 0;
-  width: 70%;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
 .submit__body {
-  width: 100%;
-  max-width: 680px;
-  margin: 0 auto;
-}
-.submit__title {
-  margin: 0px 0px 15px 0px;
-  font-weight: 500;
-}
-.submit__subtitle {
-  font-weight: 500;
-  color: #007DEA;
-  margin: 0px 0px 30px 0px;
-}
-
-.price {
-  padding: 74px 74px 74px 0;
-  background-color: #337ED8;
-  border-radius: 0 23px 23px 0;
-  width: 45%;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
   display: flex;
   justify-content: flex-end;
+  position: relative;
 }
-.price__block {
-  width: 250px;
+@media (max-width: 992px) {
+  .submit__body {
+    flex-direction: column;
+    align-items: center;
+  }
 }
-.price__name {
+.submit__price {
+  width: 400px;
+  padding: 80px;
+  background-color: #188B30;
+  border-radius: 23px;
   font-size: 30px;
   color: #F5F5F5;
+  line-height: 1.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0px -50px 0px;
+  position: relative;
+  z-index: 2;
 }
-.price__cost {
-  font-size: 30px;
-  color: #EEEBF2;
+@media (max-width: 565px) {
+  .submit__price {
+    width: 260px;
+    padding: 20px 20px;
+  }
+}
+@media (min-width: 992px) {
+  .submit__price {
+    width: 35%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.submit__name {
+  margin: 0px 0px 20px 0px;
+}
+.submit__content {
+  flex: 0 0 75%;
+  padding: 50px 0;
+  border-radius: 23px;
+  background-color: #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  .submit__content {
+    width: 100%;
+    padding: 80px 20px 50px;
+  }
+}
+@media (max-width: 565px) {
+  .submit__content {
+    padding: 60px 20px 30px;
+  }
+}
+.submit__title {
+  margin: 0px 0px 20px 0px;
+  font-size: 24px;
+  line-height: 1.3;
+}
+.submit__subtitle {
+  margin: 0px 0px 20px 0px;
+}
+.submit__list {
+  padding: 0px 0px 0px 25px;
+}
+.submit__item {
+  list-style-type: disc;
+  padding: 0;
+  margin: 0px 0px 20px 0px;
+}
+.submit__btn {
+  width: 420px;
+  padding: 15px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #188B30;
+  border: 0;
+  border-radius: 23px;
+  transition: all 0.3s ease 0s;
+}
+.submit__btn:hover {
+  background-color: #1FC742;
+}
+@media (max-width: 565px) {
+  .submit__btn {
+    width: 100%;
+  }
 }
 
 .form {
