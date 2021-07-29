@@ -6,11 +6,11 @@ body.lock {
 }
 
 .wrapper-online-school {
-  padding: 20px;
+  padding: 50px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .wrapper-online-school {
-    padding: 0;
+    padding: 0px;
   }
 }
 
@@ -67,11 +67,6 @@ body.lock {
 }
 .text_green {
   color: #188B30;
-}
-@media (max-width: 565px) {
-  .text {
-    font-size: 16px;
-  }
 }
 
 @media (min-width: 992px) {
@@ -202,7 +197,7 @@ body.lock {
 }
 @media (min-width: 992px) {
   .about__bottom {
-    margin: 150px 0px 0px 0px;
+    margin: 50px 0px 0px 0px;
     display: flex;
     justify-content: flex-end;
   }
@@ -225,11 +220,11 @@ body.lock {
   .about__prompt:before {
     content: "";
     background: url("../images/online-shool/line-arrow.png") 0 0 no-repeat;
-    width: 201px;
-    height: 146px;
+    width: 75px;
+    height: 78px;
     position: absolute;
-    bottom: 110%;
-    right: 90%;
+    bottom: 106%;
+    right: 98%;
   }
 }
 
@@ -406,33 +401,25 @@ body.lock {
   margin: 0px 0px 0px 0px;
 }
 
-.capabilities__body {
-  margin: 0 -15px;
-  display: flex;
-  flex-wrap: wrap;
-}
-.capabilities__column {
-  flex: 0 1 50%;
-  padding: 0px 15px 0px 15px;
-}
-@media (max-width: 768px) {
-  .capabilities__column {
-    flex: 1 1 100%;
-  }
-}
 .capabilities__text {
-  padding: 0px 0px 30px 65px;
+  padding-bottom: 30px;
+  padding-left: 65px;
   background: url("../images/online-shool/check.svg") left top no-repeat;
 }
 @media (max-width: 768px) {
   .capabilities__text {
-    padding: 0px 0px 20px 60px;
+    padding-bottom: 20px;
+    padding-left: 60px;
   }
 }
 @media (max-width: 565px) {
   .capabilities__text {
-    padding: 0px 0px 15px 50px;
+    padding-bottom: 15px;
+    padding-left: 50px;
   }
+}
+.capabilities__text:last-child {
+  padding-bottom: 10px;
 }
 
 .program__text {
@@ -474,7 +461,6 @@ body.lock {
   }
 }
 .program-accordion__title {
-  max-width: 580px;
   margin: 0px 20px 0px 0px;
 }
 .program-accordion__lesson {
@@ -504,20 +490,15 @@ body.lock {
   max-width: 505px;
 }
 .teacher__name {
-  padding: 0px 0px 20px 0px;
-  margin: 0px 0px 20px 0px;
-  font-size: 36px;
+  padding: 0px 0px 15px 0px;
+  margin: 0px 0px 15px 0px;
+  font-size: 22px;
   line-height: 1.35;
   letter-spacing: 1.5px;
   border-bottom: 2px solid #188B30;
 }
-@media (max-width: 768px) {
-  .teacher__name {
-    font-size: 22px;
-  }
-}
 .teacher__text {
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.4;
   letter-spacing: 1.5px;
 }
@@ -569,6 +550,7 @@ body.lock {
   border-radius: 23px;
   font-size: 30px;
   color: #F5F5F5;
+  font-weight: 700;
   line-height: 1.3;
   display: flex;
   justify-content: center;
@@ -599,8 +581,11 @@ body.lock {
 .submit__name {
   margin: 0px 0px 20px 0px;
 }
+.submit__cost {
+  font-weight: 500;
+}
 .submit__content {
-  flex: 0 0 75%;
+  flex: 0 0 73%;
   padding: 50px 0;
   border-radius: 23px;
   background-color: #e5e5e5;
@@ -623,8 +608,12 @@ body.lock {
   margin: 0px 0px 20px 0px;
   font-size: 24px;
   line-height: 1.3;
+  font-weight: 700;
 }
 .submit__subtitle {
+  font-size: 20px;
+  color: #188B30;
+  font-weight: 500;
   margin: 0px 0px 20px 0px;
 }
 .submit__list {
