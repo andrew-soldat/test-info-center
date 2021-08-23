@@ -7,7 +7,6 @@ $(function () {
    //    return false;
    // });
 	$(".info-item-equipment__item").hover(function(e) {
-		$('.label-item-equipment__item').removeClass('_active');
-		$($(this).attr('data-class')).addClass('_active');
+		$($(this).attr('data-class')).toggleClass('_active');
 	})
 });
