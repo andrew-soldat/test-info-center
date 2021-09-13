@@ -466,6 +466,9 @@
   .algorithm__bottom {
     padding: 25px 15px;
   }
+  .algorithm__bottom img {
+    display: none;
+  }
 }
 .algorithm__subtitle {
   font-size: 18px;
@@ -561,6 +564,11 @@
   position: absolute;
   left: 50%;
   top: -53px;
+}
+@media (max-width: 991px) {
+  .item-algorithm__item {
+    min-height: auto;
+  }
 }
 @media (max-width: 565px) {
   .item-algorithm__item {
