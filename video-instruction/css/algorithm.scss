@@ -1,0 +1,292 @@
+
+.algorithm {
+
+	&__title {
+		margin: 0px 0px 120px 0px;
+		font-size: 24px;
+		font-weight: 700;
+		text-align: center;
+		position: relative;
+
+		&:before,
+		&:after {
+			content:'';
+			width: 63px; 
+			border-bottom: 3px dashed #2B9040;
+			position: absolute;
+			bottom: -60px;
+			
+		}
+		
+		&:before {
+			left: 40%;
+			transform: rotate(140deg);
+		}
+
+		&:after {
+			right: 40%;
+			transform: rotate(-140deg);
+		}
+
+		@media (max-width: 991px) {
+			margin: 0px 0px 30px 0px;
+
+			&:before,
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+
+		@media (max-width: 565px) {
+			margin: 0;
+		}
+	}
+
+	&__column {
+		flex: 0 1 50%;
+		padding: 0 15px 30px;
+
+		@media (max-width: 991px) {
+			flex: 1 1 100%;
+		}
+
+		@media (max-width: 565px) {
+			padding: 0 0px 30px;
+		}
+	}
+
+	&__bottom {
+		width: 100%;
+		max-width: 1200px;
+		margin: 65px auto 0px;
+		padding: 30px 30px 30px 10px;
+		border-radius: 45px;
+		border: 2px solid #2B9040;
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		&:before,
+		&:after {
+			content:'';
+			width: 45px; 
+			border-bottom: 2px dashed #2B9040;
+			position: absolute;
+			top: -45px;
+			
+		}
+		
+		&:before {
+			left: 40%;
+			transform: rotate(-140deg);
+		}
+
+		&:after {
+			right: 40%;
+			transform: rotate(140deg);
+		}
+
+		img {
+			margin: 0px 7px 0px 0px;
+		}
+
+		ul {
+			margin: 0px;
+		}
+	
+		ul li {
+			margin: 0px 0px 5px 20px;
+			padding: 0;
+			list-style: disc;
+			font-size: 16px;
+			font-weight: 500;
+		}
+
+		@media (max-width: 991px) {
+			margin: 30px auto 0px;
+
+			&:before,
+			&:after {
+				display: none;
+			}
+		}
+
+		@media (max-width: 565px) {
+			padding: 25px 15px;
+
+			img {
+				display: none;
+			}
+		}
+	}
+
+	&__subtitle {
+		margin: 0px 0px 15px 0px;
+		font-size: 18px;
+		font-weight: 600;
+		color: #2B9040;
+	}
+
+	&__text {
+		font-size: 16px;
+		font-weight: 500;
+		margin: 0px 0px 5px 0px;
+	}
+
+	&__ready {
+		margin: 65px auto 0;
+		width: 100%;
+		max-width: 305px;
+		padding: 15px 0;
+		font-size: 18px;
+		font-weight: 500;
+		color: #FCFCFC;
+		text-align: center;
+		border-radius: 60px;
+		background-color: #2B9040;
+		position: relative;
+
+		&:before {
+			content:'';
+			height: 38px;
+			border-right: 2px dashed #2B9040;
+			position: absolute;
+			left: 50%;
+			top: -53px;
+		}
+
+		img {
+			margin: 0px 0px 0px 5px;
+		}
+
+		@media (max-width: 768px) {
+			margin: 45px auto 0;
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
+.item-algorithm {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	&__head {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@media (max-width: 565px) {
+			display: block;
+		}
+	}
+
+	&__title {
+		flex: 0 1 434px;
+		padding: 26px 0;
+		font-size: 18px;
+		font-weight: 500;
+		color: #2B9040;
+		text-align: center;
+		border-radius: 60px;
+		border: 3px solid #2B9040;
+
+		@media (max-width: 565px) {
+			width: 100%;
+			flex: 0 1 auto;
+		}
+	}
+
+	&__step {
+		flex: 0 0 133px;
+		height: 133px;
+		color:#FCFCFC;
+		font-size: 24px;
+		background-color: #2B9040;
+		border-radius: 50%;
+		display: flex;
+		justify-content:center;
+		align-items: center;
+
+		&_one {
+			@media (min-width: 991px) {
+				order: 1;
+			}
+		}
+
+		@media (max-width: 565px) {
+			width: 85px;
+			height: 85px;
+			margin: 0 auto 10px;
+		}
+	}
+
+	&__content {
+		flex: 1 1 auto;
+		margin: 70px 0px 0px 0px;
+		padding: 30px;
+		border: 2px dashed #2B9040;
+		border-radius: 45px;
+		position: relative;
+
+		&:before {
+			content:'';
+			height: 38px;
+			border-right: 2px dashed #2B9040;
+			position: absolute;
+			left: 50%;
+			top: -65px;
+		}
+
+		@media (max-width: 768px) {
+			margin: 30px 0px 0px 0px;
+
+			&:before {
+				display: none;
+			}
+		}
+
+		@media (max-width: 565px) {
+			padding: 25px 15px;
+		}
+	}
+
+	&__item {
+		margin: 0px 0px 50px 0px;
+
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+
+		@media (max-width: 565px) {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+
+	&__subtitle {
+		font-size: 16px;
+		font-weight: 700;
+	}
+
+	a {
+		display: inline-block;
+		font-size: 14px;
+		color: #2B9040;
+
+		&:hover {
+			color: #2B9040;
+			opacity: 0.7;
+		}
+	}
+
+	&__text {
+		font-size: 14px;
+	}
+}
