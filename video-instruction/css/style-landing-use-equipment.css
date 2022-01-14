@@ -288,6 +288,11 @@
   color: #F38B04;
 }
 
+.use-link-block .fa-info-circle:before {
+  color: red;
+  font-size: 30px;
+}
+
 .use-question {
   padding: 20px;
   background-color: #F5F5F5;
