@@ -52,6 +52,10 @@
    &__content {
       width: 100%;
       max-width: 680px;
+
+		@media (min-width: 992px) {
+			min-width: 560px;
+		}
    }
 
    &__label {
@@ -74,8 +78,7 @@
 }
 .main-webinar-info {
    margin: 0px 0px 60px 0px;
-   display: inline-flex;
-   align-items: center;
+   display: flex;
 
    @media (max-width: 992px) {
       flex-direction: column;
@@ -86,20 +89,20 @@
    &__item {
       display: flex;
       align-items: flex-start;
-      padding: 20px 40px;
+      padding: 15px 40px;
       border-left: 2px solid #a4a4a4;
 
       &:first-child {
-         padding: 20px 40px 20px 0px;
-
-         @media (min-width: 992px) {
+			
+			@media (min-width: 992px) {
+				padding: 15px 40px 15px 0px;
             border: none;
          }
       }
 
       &:last-child {
          @media (min-width: 992px) {
-            padding: 20px 0px 20px 40px;
+            padding: 15px 0px 15px 40px;
          }
       }
 
@@ -107,10 +110,6 @@
          margin: 5px 20px 0px 0px;
          font-size: 20px;
          color: #188b30;
-      }
-
-      @media (max-width: 1100px) {
-         padding: 20px;
       }
 
       @media (max-width: 992px) {
@@ -325,10 +324,10 @@
    }
 }
 .participating-companies {
-   margin: 0px 0px 80px 0px;
+   margin: 0px 0px 70px 0px;
 
 	@media (max-width: 768px) {
-		margin: 0px 0px 30px 0px;
+		margin: 0px 0px 20px 0px;
 	}
 
    &__title {
@@ -343,7 +342,7 @@
       margin: 0 -30px;
 
       a {
-         margin: 0 30px 30px;
+         margin: 0 25px 40px;
       }
 
 		@media (max-width: 992px) {
