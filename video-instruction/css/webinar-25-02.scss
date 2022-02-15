@@ -35,9 +35,9 @@
 .main-webinar {
    margin: 0px 0px 110px 0px;
 
-	@media (max-width: 768px) {
-		margin: 0px 0px 60px 0px;
-	}
+   @media (max-width: 768px) {
+      margin: 0px 0px 60px 0px;
+   }
 
    &__body {
       display: flex;
@@ -53,9 +53,9 @@
       width: 100%;
       max-width: 680px;
 
-		@media (min-width: 992px) {
-			min-width: 560px;
-		}
+      @media (min-width: 992px) {
+         min-width: 560px;
+      }
    }
 
    &__label {
@@ -82,8 +82,8 @@
 
    @media (max-width: 992px) {
       flex-direction: column;
-		align-items: flex-start;
-		margin: 0px 0px 30px 0px;
+      align-items: flex-start;
+      margin: 0px 0px 30px 0px;
    }
 
    &__item {
@@ -93,9 +93,8 @@
       border-left: 2px solid #a4a4a4;
 
       &:first-child {
-			
-			@media (min-width: 992px) {
-				padding: 15px 40px 15px 0px;
+         @media (min-width: 992px) {
+            padding: 15px 40px 15px 0px;
             border: none;
          }
       }
@@ -133,32 +132,32 @@
 .numbers-webinar {
    margin: 0px 0px 75px 0px;
 
-	@media (max-width: 768px) {
-		margin: 0px 0px 25px 0px;
-	}
+   @media (max-width: 768px) {
+      margin: 0px 0px 25px 0px;
+   }
 
    &__body {
       display: flex;
 
-		@media (max-width: 768px) {
-			flex-wrap: wrap;
-		}
+      @media (max-width: 768px) {
+         flex-wrap: wrap;
+      }
    }
 
    &__item {
       flex: 0 1 25%;
-		margin: 0px 0px 35px 0px;
+      margin: 0px 0px 35px 0px;
       display: flex;
       flex-direction: column;
       align-items: center;
 
-		@media (max-width: 768px) {
-			flex: 0 1 50%;
-		}
+      @media (max-width: 768px) {
+         flex: 0 1 50%;
+      }
 
-		@media (max-width: 480px) {
-			flex: 0 1 100%;
-		}
+      @media (max-width: 480px) {
+         flex: 0 1 100%;
+      }
    }
 
    &__number {
@@ -197,9 +196,9 @@
 .what-await {
    margin: 0px 0px 110px 0px;
 
-	@media (max-width: 768px) {
-		margin: 0px 0px 60px 0px;
-	}
+   @media (max-width: 768px) {
+      margin: 0px 0px 60px 0px;
+   }
 
    &__body {
       display: flex;
@@ -210,9 +209,9 @@
    &__img {
       margin: 0px 70px 0px 0px;
 
-		@media (max-width: 768px) {
-			display: none;
-		}
+      @media (max-width: 768px) {
+         display: none;
+      }
    }
 
    &__content {
@@ -244,9 +243,9 @@
 .program {
    margin: 0px 0px 110px 0px;
 
-	@media (max-width: 768px) {
-		margin: 0px 0px 60px 0px;
-	}
+   @media (max-width: 768px) {
+      margin: 0px 0px 60px 0px;
+   }
 
    &__title {
       margin: 0px 0px 35px 0px;
@@ -260,10 +259,10 @@
       display: flex;
       align-items: start;
 
-		@media (max-width: 768px) {
-			display: block;
-			margin: 0px 0px 30px 0px;
-		}
+      @media (max-width: 768px) {
+         display: block;
+         margin: 0px 0px 30px 0px;
+      }
    }
 
    &__time {
@@ -271,9 +270,9 @@
       padding: 24px 0px 0 24px;
       font-size: 20px;
 
-		@media (max-width: 768px) {
-			padding: 0px 0px 10px 0px;
-		}
+      @media (max-width: 768px) {
+         padding: 0px 0px 10px 0px;
+      }
    }
 
    &__desc {
@@ -299,15 +298,15 @@
          font-weight: 500;
       }
 
-		@media (max-width: 768px) {
-			padding: 10px 0px 0px 0px;
-			border-left: none;
-			border-top: 1px solid #a4a4a4;
+      @media (max-width: 768px) {
+         padding: 10px 0px 0px 0px;
+         border-left: none;
+         border-top: 1px solid #a4a4a4;
 
-			&:before {
-				display: none;
-			}
-		}
+         &:before {
+            display: none;
+         }
+      }
    }
 
    &__heading {
@@ -326,9 +325,9 @@
 .participating-companies {
    margin: 0px 0px 70px 0px;
 
-	@media (max-width: 768px) {
-		margin: 0px 0px 20px 0px;
-	}
+   @media (max-width: 768px) {
+      margin: 0px 0px 20px 0px;
+   }
 
    &__title {
       margin: 0px 0px 35px 0px;
@@ -345,13 +344,13 @@
          margin: 0 25px 40px;
       }
 
-		@media (max-width: 992px) {
-			margin: 0 -16px;
-		}
+      @media (max-width: 992px) {
+         margin: 0 -16px;
+      }
 
-		img{
-			max-width: 100%;
-		}
+      img {
+         max-width: 100%;
+      }
    }
 }
 .registration {
@@ -360,13 +359,13 @@
    padding: 40px 30px;
    margin: 0 -30px;
 
-	@media (max-width: 1200px) {
-		margin: 0;
-	}
+   @media (max-width: 1200px) {
+      margin: 0;
+   }
 
-	@media (max-width: 565px) {
-		padding: 30px 15px;
-	}
+   @media (max-width: 565px) {
+      padding: 30px 15px;
+   }
 
    &__body {
       display: flex;
@@ -414,3 +413,4 @@
       }
    }
 }
+
