@@ -8,12 +8,14 @@ body {
       overflow: hidden;
    }
 }
-h2,
-h3,
-h4,
-h5,
-h6 {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
    margin: 0px;
+   line-height: 1.4;
 }
 .container {
    width: 100%;
@@ -66,7 +68,7 @@ h6 {
    &:hover {
       color: #ffffff;
       background-color: #daaf71;
-		box-shadow: 14px -14px #ffffff, 15px -15px #daaf71;
+      box-shadow: 14px -14px #ffffff, 15px -15px #daaf71;
    }
 
    &_brown {
@@ -77,7 +79,7 @@ h6 {
          color: #c47d2f;
          background-color: #fff;
          border-color: #c47d2f;
-			box-shadow: 14px -14px #daaf71, 15px -15px #ffffff;
+         box-shadow: 14px -14px #daaf71, 15px -15px #ffffff;
       }
    }
 
@@ -86,7 +88,7 @@ h6 {
    }
 }
 .decor {
-	transition: all 0.3s ease 0s;
+   transition: all 0.3s ease 0s;
 
    &:hover {
       box-shadow: 14px -14px transparent, 15px -15px #daaf71;
@@ -185,9 +187,9 @@ h6 {
          display: inline-block;
          width: 90px;
 
-			@media (max-width: 565px) {
-				width: 60px;
-			}
+         @media (max-width: 565px) {
+            width: 60px;
+         }
       }
    }
 
@@ -221,7 +223,7 @@ h6 {
       margin: 0;
 
       li {
-			padding-left: 0;
+         padding-left: 0;
          margin: 0px 0px 0px 70px;
 
          @media (max-width: 1100px) {
@@ -273,9 +275,9 @@ h6 {
       padding: 130px 0px 50px;
    }
 
-	@media (max-width: 565px) {
-		padding: 100px 0px 50px;
-	}
+   @media (max-width: 565px) {
+      padding: 100px 0px 50px;
+   }
 
    &__body {
       display: flex;
@@ -310,21 +312,21 @@ h6 {
    }
 
    &__img {
-		margin: 0px 0px 0px 50px;
+      margin: 0px 0px 0px 50px;
       flex: 0 1 56%;
       order: 2;
 
-		@media (max-width: 992px) {
+      @media (max-width: 992px) {
          margin: 0;
       }
    }
 }
 .about-magazine {
-	margin: 0px 0px 80px 0px;
+   margin: 0px 0px 80px 0px;
 
-	@media (max-width: 992px) {
-		margin: 0px 0px 50px 0px;
-	}
+   @media (max-width: 992px) {
+      margin: 0px 0px 50px 0px;
+   }
 
    &__description {
       width: 100%;
@@ -343,18 +345,18 @@ h6 {
    }
 }
 .numbers {
-	margin: 0px 0px 100px 0px;
+   margin: 0px 0px 100px 0px;
    padding: 100px 0 70px;
    background-color: #ededed;
 
    @media (max-width: 992px) {
-		margin: 0px 0px 50px 0px;
+      margin: 0px 0px 50px 0px;
       padding: 70px 0 40px;
    }
 
-	@media (max-width: 565px) {
-		padding: 50px 0 20px;
-	}
+   @media (max-width: 565px) {
+      padding: 50px 0 20px;
+   }
 
    &__body {
       display: flex;
@@ -445,7 +447,7 @@ h6 {
          margin: 0px 0px 60px 0px;
       }
 
-		@media (max-width: 992px) {
+      @media (max-width: 992px) {
          margin: 0px 0px 60px 0px;
       }
 
@@ -502,9 +504,9 @@ h6 {
       font-size: 24px;
       font-weight: 700;
 
-		@media (max-width: 565px) {
-			font-size: 20px;
-		}
+      @media (max-width: 565px) {
+         font-size: 20px;
+      }
    }
 
    &__text {
@@ -513,10 +515,10 @@ h6 {
    }
 }
 .join {
-	margin: 0px 0px 250px 0px;
+   margin: 0px 0px 250px 0px;
    background-color: #daaf71;
 
-	@media (max-width: 1350px) {
+   @media (max-width: 1350px) {
       margin: 0px 0px 200px;
    }
 
@@ -685,9 +687,9 @@ h6 {
 .subscription {
    margin: 0px 0px 130px 0px;
 
-	@media (max-width: 992px) {
-		margin: 0px 0px 70px 0px;
-	}
+   @media (max-width: 992px) {
+      margin: 0px 0px 70px 0px;
+   }
 
    &__title {
       margin: 0px 0px 90px 0px;
@@ -732,66 +734,73 @@ h6 {
       display: flex;
    }
 }
-.tabs .nav-tabs {
-   border: none;
-}
 .nav.nav-tabs {
    display: flex;
    justify-content: center;
    align-items: center;
+   border: none;
 }
 .tabs .nav.nav-tabs li {
    flex: 0 1 380px;
 
-	@media (max-width: 565px) {
-		flex: 1 1 auto;
-	}
+   @media (max-width: 565px) {
+   	flex: 1 1 auto;
+   }
 }
 .tabs .nav.nav-tabs a {
-   width: 100%;
-   padding: 22px 10px;
+   margin: 0;
+   padding: 20px 10px;
    font-size: 24px;
    color: #1d1d1b;
    font-weight: 400;
    text-align: center;
    background-color: #ededed;
    border: 2px solid #ededed;
-	transition: all 0.3s ease 0s;
+   transition: all 0.3s ease 0s;
 
    @media (max-width: 768px) {
       font-size: 20px;
    }
 
-	&:hover {
-		box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 5px #ededed;
-	}
+   &:hover,
+   &:active {
+      box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 5px #ededed;
+   }
 }
-.tabs .nav.nav-tabs li a.active {
-   background-color: #daaf71;
-	border: 2px solid #daaf71;
+.tabs .nav.nav-tabs li.active a {
    color: #ffffff;
    font-weight: 700;
-	box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 5px #daaf71;
-	pointer-events: none;
+   box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 5px #daaf71;
+   pointer-events: none;
+
+   &:before {
+      display: none;
+   }
+}
+.tabs .nav.nav-tabs li.active a,
+.tabs .nav.nav-tabs li.active a:hover,
+.tabs .nav.nav-tabs li.active a:focus {
+	background-color: #daaf71;
+	border: 2px solid #daaf71;
 }
 .tabs .nav-tabs + .tab-content {
    margin-top: -39px;
    padding: 100px 80px 55px;
    border: 1px solid #dadada;
 
-	@media (max-width: 1350px) {
-		padding: 80px 50px 50px;
-	}
+   @media (max-width: 1350px) {
+      padding: 80px 50px 50px;
+   }
 
-	@media (max-width: 1100px) {
-		padding: 70px 15px 25px;
-	}
+   @media (max-width: 1100px) {
+      padding: 70px 15px 25px;
+   }
 }
-.tab-content>.tab-pane {
-	display: none;
+.tab-content > .tab-pane {
+   display: none;
 }
-.tab-content>.active {
-	display: block;
+.tab-content > .active {
+   display: block;
 }
 .tab-subscription {
    display: flex;
@@ -809,21 +818,21 @@ h6 {
       flex: 0 1 47%;
 
       li {
-			display: flex;
-			align-items: center;
+         display: flex;
+         align-items: center;
          color: #737373;
-			font-size: 24px;
+         font-size: 24px;
 
-			img {
-				width: 58px;
-				height: auto;
-				margin: 0px 20px 0px 0px;
+         img {
+            width: 58px;
+            height: auto;
+            margin: 0px 20px 0px 0px;
 
-				@media (max-width: 565px) {
-					width: 40px;
-					margin: 0px 10px 0px 0px;
-				}
-			}
+            @media (max-width: 565px) {
+               width: 40px;
+               margin: 0px 10px 0px 0px;
+            }
+         }
 
          @media (max-width: 768px) {
             font-size: 20px;
@@ -832,9 +841,9 @@ h6 {
          &:not(:last-child) {
             margin: 0px 0px 50px 0px;
 
-				@media (max-width: 565px) {
-					margin: 0px 0px 25px 0px;
-				}
+            @media (max-width: 565px) {
+               margin: 0px 0px 25px 0px;
+            }
          }
       }
    }
@@ -842,9 +851,9 @@ h6 {
    &__img {
       margin: 0px 0px 40px 0px;
 
-		@media (max-width: 565px) {
-			margin: 0px 0px 25px 0px;
-		}
+      @media (max-width: 565px) {
+         margin: 0px 0px 25px 0px;
+      }
    }
 
    &__subscription {
@@ -853,19 +862,19 @@ h6 {
       li:not(:last-child) {
          margin: 0px 0px 50px 0px;
 
-			@media (max-width: 565px) {
-				margin: 0px 0px 25px 0px;
-			}
+         @media (max-width: 565px) {
+            margin: 0px 0px 25px 0px;
+         }
       }
    }
 
-	&__block:not(:last-child) {
-		margin: 0px 0px 60px 0px;
+   &__block:not(:last-child) {
+      margin: 0px 0px 60px 0px;
 
-		@media (max-width: 565px) {
-			margin: 0px 0px 30px 0px;
-		}
-	}
+      @media (max-width: 565px) {
+         margin: 0px 0px 30px 0px;
+      }
+   }
 
    &__text {
       margin: 0px 0px 30px 0px;
@@ -876,229 +885,228 @@ h6 {
          font-size: 20px;
       }
 
-		@media (max-width: 565px) {
-			margin: 0px 0px 15px 0px;
-		}
+      @media (max-width: 565px) {
+         margin: 0px 0px 15px 0px;
+      }
    }
 
-	@media (max-width: 992px) {
-		flex-direction: column;
-		align-items: center;
+   @media (max-width: 992px) {
+      flex-direction: column;
+      align-items: center;
 
-		.tab-subscription__info {
-			margin: 0px 0px 60px 0px;
+      .tab-subscription__info {
+         margin: 0px 0px 60px 0px;
 
-			@media (max-width: 565px) {
-				margin: 0px 0px 30px 0px;
-			}
-		}
+         @media (max-width: 565px) {
+            margin: 0px 0px 30px 0px;
+         }
+      }
 
-		.tab-subscription__info,
-		.tab-subscription__subscription {
-			width: 100%;
-			max-width: 600px;
-		}
-	}
+      .tab-subscription__info,
+      .tab-subscription__subscription {
+         width: 100%;
+         max-width: 600px;
+      }
+   }
 }
 footer {
    margin: 0;
-	line-height: 1.4;
+   line-height: 1.4;
 
-	& > .container {
-		padding-bottom: 0;
-	}
+   & > .container {
+      padding-bottom: 0;
+   }
 }
 .footer {
-	padding: 30px 0;
-	background-color: #EDEDED;
+   padding: 30px 0;
+   background-color: #ededed;
 
-	@media (max-width: 768px) {
-		padding: 20px 0;
+   @media (max-width: 768px) {
+      padding: 20px 0;
 
-		.item-footer-contact {
-			margin: 0px 0px 10px 0px;
-		}
-	}
+      .item-footer-contact {
+         margin: 0px 0px 10px 0px;
+      }
+   }
 }
 .footer-top {
-	margin: 0px 0px 30px 0px;
-	display: flex;
+   margin: 0px 0px 30px 0px;
+   display: flex;
 
-	@media (max-width: 1100px) {
-		display: block;
-	}
+   @media (max-width: 1100px) {
+      display: block;
+   }
 
-	@media (max-width: 768px) {
-		margin: 0px 0px 20px 0px;
-	}
-	
-	&__logo {
-		flex: 0 1 30%;
+   @media (max-width: 768px) {
+      margin: 0px 0px 20px 0px;
+   }
 
-		@media (max-width: 1100px) {
-			margin: 0px 0px 30px 0px;
-			display: flex;
-			justify-content:center;
-			align-items: center;
-		}
+   &__logo {
+      flex: 0 1 30%;
 
-		@media (max-width: 768px) {
-			margin: 0px 0px 20px 0px;
-		}
-	}
+      @media (max-width: 1100px) {
+         margin: 0px 0px 30px 0px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
 
-	&__contacts {
-		flex: 0 1 70%;
-		display: flex;
+      @media (max-width: 768px) {
+         margin: 0px 0px 20px 0px;
+      }
+   }
 
-		@media (max-width: 768px) {
-			display: block;
-		}
-	}
+   &__contacts {
+      flex: 0 1 70%;
+      display: flex;
 
-	&__column {
-		padding: 0px 20px 0px 0px;
-		flex: 0 1 25%;
+      @media (max-width: 768px) {
+         display: block;
+      }
+   }
 
-		&_big {
-			flex: 0 1 50%;
-		}
+   &__column {
+      padding: 0px 20px 0px 0px;
+      flex: 0 1 25%;
 
-		@media (max-width: 768px) {
-			padding: 0;
-		}
-	}
+      &_big {
+         flex: 0 1 50%;
+      }
+
+      @media (max-width: 768px) {
+         padding: 0;
+      }
+   }
 }
 .footer-logo {
-	width: 100%;
-	max-width: 300px;
-	display: flex;
-	align-items: center;
-	color: #1D1D1B;
-	font-size: 18px;
-	font-weight: 700;
-	line-height: 1.3;
+   width: 100%;
+   max-width: 300px;
+   display: flex;
+   align-items: center;
+   color: #1d1d1b;
+   font-size: 18px;
+   font-weight: 700;
+   line-height: 1.3;
 
-	img {
-		width: 75px;
-		margin: 0px 10px 0px 0px;
-	}
+   img {
+      width: 75px;
+      margin: 0px 10px 0px 0px;
+   }
 
-	@media (max-width: 565px) {
-		font-size: 16px;
+   @media (max-width: 565px) {
+      font-size: 16px;
 
-		img {
-			width: 65px;
-		}
-	}
+      img {
+         width: 65px;
+      }
+   }
 }
 .item-footer-contact {
-	color: #1D1D1B;
-	font-size: 16px;
-	font-weight: 700;
+   color: #1d1d1b;
+   font-size: 16px;
+   font-weight: 700;
 
-	&__text {
-		font-size: 14px;
-		font-weight: 400;
-		margin: 0px 0px 5px 0px;
-		color: #737373;
-	}
+   &__text {
+      font-size: 14px;
+      font-weight: 400;
+      margin: 0px 0px 5px 0px;
+      color: #737373;
+   }
 
-	a {
-		color: inherit;
+   a {
+      color: inherit;
 
-		&:hover {
-			color: #daaf71;
-		}
-	}
-
+      &:hover {
+         color: #daaf71;
+      }
+   }
 }
 .footer-bottom {
-	display: flex;
+   display: flex;
 
-	@media (max-width: 1100px) {
-		display: block;
-	}
+   @media (max-width: 1100px) {
+      display: block;
+   }
 
-	&__social {
-		order: 1;
-		flex: 0 1 30%;
-		display: flex;
-		flex-direction: column;
+   &__social {
+      order: 1;
+      flex: 0 1 30%;
+      display: flex;
+      flex-direction: column;
 
-		&_wrapper {
-			flex: 1 1 auto;
+      &_wrapper {
+         flex: 1 1 auto;
 
-			@media (max-width: 1100px) {
-				margin: 0px auto 30px;
-			}
+         @media (max-width: 1100px) {
+            margin: 0px auto 30px;
+         }
 
-			@media (max-width: 768px) {
-				margin: 0px auto 20px;
-			}
-		}
+         @media (max-width: 768px) {
+            margin: 0px auto 20px;
+         }
+      }
 
-		@media (max-width: 1100px) {
-			text-align: center;
-		}
-	}
+      @media (max-width: 1100px) {
+         text-align: center;
+      }
+   }
 
-	&__copyright {
-		font-size: 14px;
-	}
+   &__copyright {
+      font-size: 14px;
+   }
 
-	&__info {
-		order: 2;
-		flex: 0 1 70%;
+   &__info {
+      order: 2;
+      flex: 0 1 70%;
 
-		@media (max-width: 1100px) {
-			margin: 0px 0px 30px 0px;
-		}
+      @media (max-width: 1100px) {
+         margin: 0px 0px 30px 0px;
+      }
 
-		@media (max-width: 768px) {
-			margin: 0px 0px 20px 0px;
-		}
-	}
+      @media (max-width: 768px) {
+         margin: 0px 0px 20px 0px;
+      }
+   }
 
-	&__column {
-		padding: 0px 30px 0px 0px;
-		flex: 0 1 25%;
+   &__column {
+      padding: 0px 30px 0px 0px;
+      flex: 0 1 25%;
 
-		&_big {
-			flex: 1 1 auto;
-		}
-	}
+      &_big {
+         flex: 1 1 auto;
+      }
+   }
 
-	&__title {
-		margin: 0px 0px 20px 0px;
-		color: #1D1D1B;
-		font-size: 18px;
-		font-weight: 700;
+   &__title {
+      margin: 0px 0px 20px 0px;
+      color: #1d1d1b;
+      font-size: 18px;
+      font-weight: 700;
 
-		@media (max-width: 768px) {
-			margin: 0px 0px 15px 0px;
-		}
-	}
+      @media (max-width: 768px) {
+         margin: 0px 0px 15px 0px;
+      }
+   }
 
-	&__contacts {
-		display: flex;
+   &__contacts {
+      display: flex;
 
-		@media (max-width: 768px) {
-			display: block;
-		}
-	}
+      @media (max-width: 768px) {
+         display: block;
+      }
+   }
 }
 .social-block {
-	display: flex;
+   display: flex;
 
-	a {
-		margin: 0px 15px 0px 0px;
+   a {
+      margin: 0px 15px 0px 0px;
 
-		&:hover {
-			img {
-				transition: all 0.4s ease 0s;
-				transform: rotate(360deg);
-			}
-		}
-	}
+      &:hover {
+         img {
+            transition: all 0.4s ease 0s;
+            transform: rotate(360deg);
+         }
+      }
+   }
 }
