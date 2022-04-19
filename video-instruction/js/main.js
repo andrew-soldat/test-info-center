@@ -9,6 +9,7 @@ $(function () {
 	})
 });
 
+
 function DynamicAdapt(type) {
 	this.type = type;
 }
@@ -112,7 +113,7 @@ DynamicAdapt.prototype.indexInParent = function (parent, element) {
 	return Array.prototype.indexOf.call(array, element);
 };
 
-// Функция сортировки массива по breakpoint и place 
+// Функция сортировки массива по breakpoint и place
 // по возрастанию для this.type = min
 // по убыванию для this.type = max
 DynamicAdapt.prototype.arraySort = function (arr) {
