@@ -61,15 +61,21 @@
 
 	&__title {
 		margin: 0px 0px 20px 0px;
-		font-size: 32px;
-		color: #C47A2C;
+		font-size: 40px;
+		font-weight: 700;
+		background-color: #C47A2C;
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		text-shadow: rgba(255,255,255,0.4) 0px 3px 3px;
 
 		@media (max-width: 992px) {
-			font-size: 28px;
+			font-size: 32px;
 		}
 
 		@media (max-width: 565px) {
-			font-size: 26px;
+			font-size: 28px;
 		}
 	}
 
@@ -106,6 +112,7 @@
 		max-width: 1130px;
 		margin: 0 auto;
 		display: flex;
+		align-items: start;
 		justify-content: space-between;
 
 		@media (max-width: 992px) {
@@ -162,7 +169,7 @@
       flex: 0 1 33.3333%;
       padding: 0px 15px 15px;
 
-      @media (max-width: 991px) {
+      @media (max-width: 992px) {
          flex: 1 1 100%;
 
          &:nth-child(3) {
@@ -187,10 +194,16 @@
    }
 
    &__title {
-		margin: 0px 0px 20px 0px;
+		min-height: 48px;;
+		margin: 0px 0px 10px 0px;
 		font-size: 24px;
 		color: #C47A2C;
 		font-weight: 500;
+		text-align: center;
+
+		@media (max-width: 992px) {
+			min-height: auto;
+		}
 
 		@media (max-width: 565px) {
 			font-size: 20px;
@@ -286,6 +299,18 @@
 }
 .tab-subscription {
 	font-size: 16px;
+	a {
+		font-size: 16px;
+		color: #C47A2C;
+		font-weight: 500;
+		transition: all 0.3s ease 0s;
+
+		&:hover {
+			text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+		}
+	}
 
 	&__title {
 		color: #C47A2C;
@@ -296,17 +321,8 @@
 
 	&__link {
 		margin: 0px 0px 10px 0px;
-
-		a {
-			font-size: 16px;
-			color: #C47A2C;
-			font-weight: 500;
-
-			&:hover {
-				color: #864500;
-			}
-		}
 	}
+
 
 	&__attention {
 		margin: 0 auto;
@@ -333,16 +349,6 @@
          padding-left: 0;
       }
    }
-
-	a {
-		font-size: 16px;
-		color: #272727;
-		font-weight: 500;
-
-		&:hover {
-			color: #C47A2C;
-		}
-	}
 }
 .terms-advertising {
 	.tabs {
@@ -361,18 +367,22 @@
 		font-size: 16px;
 		font-weight: 400;
 
-		span {
-			margin: 0px 0px 0px 15px;
+		i {
+			margin: 0px 10px 0px 0px;
 		}
 
 		@media (max-width: 991px) {
-			span {
+			.nav-text {
 				display: none;
 			}
 		}
 
 		@media (max-width: 768px) {
 			font-size: 16px;
+		}
+
+		@media (max-width: 565px) {
+			padding: 20px 0px;
 		}
 	}
 
@@ -396,6 +406,9 @@
 		padding: 18px 20px;
 		text-align: center;
 		border: 1px solid #C47A2C;
+		display: flex;
+		justify-content:center;
+		align-items: center;
 	}
 }
 
@@ -460,10 +473,12 @@
 	&__name {
 		margin: 0px 0px 15px 0px;
 		font-size: 16px;
+		font-weight: 700;
 	}
 
 	&__position {
 		font-size: 14px;
+		color: #555555;
 	}
 }
 
@@ -514,5 +529,9 @@
 		&:hover {
 			color: #C47A2C;
 		}
+	}
+
+	&:last-child {
+		margin: 0px 0px 0px 0px;
 	}
 }
