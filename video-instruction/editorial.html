@@ -36,7 +36,7 @@
 												<h1 class="main-editorial__title">Редакция</h1>
 												<p class="main-editorial__text">Издательская деятельность является одним из направлений деятельности, котолрое обеспечивает стабильное экономическое развитие предприятия</p>
 												<div class="main-editorial__link">
-													<a href="#" class="link-btn">Больше о редакции</a>
+													<a href="#issued-editions" class="link-btn">Выпускаемые издания</a>
 												</div>
 											</div>
 											<div class="main-editorial__video">
@@ -79,7 +79,7 @@
 
 										</div>
 									</section>
-									<section class="issued-editions wrapper-block">
+									<section id="issued-editions" class="issued-editions wrapper-block">
 										<h2 class="title">Выпускаемые издания</h2>
 										<div class="issued-editions__body">
 											<div class="issued-editions__column">
@@ -149,7 +149,7 @@
 																<div class="tab-content">
 																	<div class="tab-pane active" id="print1">
 																		<div class="tab-subscription">
-																			<div>Оформить письмо-заявку. К письму-заявке в обязательном порядке должны прилагаться:</div>
+																			<p>Оформить письмо-заявку. К письму-заявке в обязательном порядке должны прилагаться:</p>
 																			<ul>
 																				<li>- копия лицензии на осуществление деятельности (свидетельства о государственной регистрации предприятия);</li>
 																				<li>- рекламный модуль или статья (текст, иллюстрация, логотип) – для печатной версии журналов;</li>
@@ -219,7 +219,7 @@
 																<div class="tab-content">
 																	<div class="tab-pane active" id="digital">
 																		<div class="tab-subscription">
-																			<div>Оформить письмо-заявку. К письму-заявке в обязательном порядке должны прилагаться:</div>
+																			<p>Оформить письмо-заявку. К письму-заявке в обязательном порядке должны прилагаться:</p>
 																			<ul>
 																				<li>- копия лицензии на осуществление деятельности (свидетельства о государственной регистрации предприятия);</li>
 																				<li>- при размещении сведений о компании в электронном каталоге «Наши партнёры» – рекламная информация в виде текстового файла и гиперссылка для перехода на сайт;</li>
@@ -397,6 +397,12 @@
 		<script src="./js/aspro-allcorp2.js"></script>
 		<script>
 			(function() {
+				$('.main-editorial__link a').click(function (event) {
+					var target = $(this).attr('href');
+					$('html, body').animate({ scrollTop: $(target).offset().top - 80 }, 800);
+					return false;
+				});
+
 				function getGridSize() {
 					return (window.innerWidth < 500) ? 1 :
 							(window.innerWidth < 700) ? 2 :

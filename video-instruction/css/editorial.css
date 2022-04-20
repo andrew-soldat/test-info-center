@@ -70,11 +70,7 @@
   margin: 0px 0px 20px 0px;
   font-size: 40px;
   font-weight: 700;
-  background-color: #C47A2C;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: rgba(255, 255, 255, 0.4) 0px 3px 3px;
+  color: #C47A2C;
 }
 
 @media (max-width: 992px) {
@@ -117,6 +113,7 @@
   max-width: 945px;
   margin: 0 auto 40px;
   text-align: center;
+  font-size: 16px;
 }
 
 .about-editorial__wrapper {
@@ -160,8 +157,8 @@
 }
 
 .item-about-editorial:hover {
-  -webkit-box-shadow: 14px -14px transparent, 15px -15px #daaf71;
-          box-shadow: 14px -14px transparent, 15px -15px #daaf71;
+  -webkit-box-shadow: 14px -14px transparent, 15px -15px #C47A2C;
+          box-shadow: 14px -14px transparent, 15px -15px #C47A2C;
 }
 
 @media (max-width: 992px) {
@@ -191,6 +188,9 @@
 }
 
 .item-about-editorial__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   color: #737373;
   line-height: 1.4;
   text-align: center;
@@ -247,8 +247,8 @@
 }
 
 .issued-editions__item:hover {
-  -webkit-box-shadow: 14px -14px transparent, 15px -15px #daaf71;
-          box-shadow: 14px -14px transparent, 15px -15px #daaf71;
+  -webkit-box-shadow: 14px -14px transparent, 15px -15px #C47A2C;
+          box-shadow: 14px -14px transparent, 15px -15px #C47A2C;
 }
 
 .issued-editions__title {
@@ -410,7 +410,7 @@
 }
 
 .tab-subscription a:hover {
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  color: #a36523;
 }
 
 .tab-subscription__title {
@@ -482,7 +482,7 @@
   margin: 0px 10px 0px 0px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .terms-advertising .tabs .nav.nav-tabs a .nav-text {
     display: none;
   }
