@@ -1,83 +1,5 @@
 .about-img {
-  margin: 0px 0px 60px 0px;
-}
-
-.about-block {
-  margin: 48px 0px 0px 0px;
-}
-
-.about-title {
-  color: #C47A2C;
-  font-weight: 700;
-}
-
-.flex-block-3 {
-  margin: 0 -14px -28px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.flex-block-3__column {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 33.333%;
-          flex: 0 1 33.333%;
-  padding: 0 14px 28px;
-}
-
-@media (max-width: 1300px) {
-  .flex-block-3__column {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 50%;
-            flex: 0 1 50%;
-  }
-}
-
-@media (max-width: 700px) {
-  .flex-block-3__column {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
-  }
-}
-
-.item-aim {
-  height: 100%;
-  padding: 16px;
-  border: 1px solid #DADADA;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.item-aim__icon {
-  margin: 0px 25px 0px 0px;
-}
-
-.item-aim__icon img {
-  max-width: 60px;
-}
-
-.item-aim__text {
-  font-size: 14px;
-  font-weight: 300;
-}
-
-.item-principle__title {
-  margin: 0px 0px 15px 0px;
-  color: #C47A2C;
-  font-weight: 700;
-  text-decoration: underline;
-}
-
-.item-principle__text {
-  font-size: 16px;
-  font-weight: 300;
+  margin: 0px 0px 30px 0px;
 }
 
 .about-history__row {
@@ -116,6 +38,7 @@
   margin: 0px 0px 24px 0px;
   padding: 0px 0px 15px 0px;
   font-weight: 700;
+  line-height: 1.4;
   position: relative;
 }
 
@@ -131,56 +54,4 @@
 
 .about-history__title span {
   color: #C47A2C;
-}
-
-.about-history-list ul {
-  margin: 0;
-}
-
-.about-history-list li {
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.about-history-list li:last-child .about-history-list__text:after {
-  display: none;
-}
-
-.about-history-list__date {
-  padding: 0 25px 25px;
-  color: #808181;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.about-history-list__text {
-  padding: 0px 0px 35px 25px;
-  font-size: 16px;
-  position: relative;
-}
-
-.about-history-list__text:before, .about-history-list__text:after {
-  content: '';
-  position: absolute;
-}
-
-.about-history-list__text:before {
-  width: 10px;
-  height: 10px;
-  background-color: #C47A2C;
-  border-radius: 50%;
-  top: 7px;
-  left: -5px;
-}
-
-.about-history-list__text:after {
-  width: 2px;
-  max-height: 100%;
-  background-color: #D1D2D4;
-  left: -1px;
-  top: 20px;
-  bottom: 0;
 }
