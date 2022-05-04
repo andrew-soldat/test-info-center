@@ -22,7 +22,7 @@
 
 		.item-main-block__img {
 			flex: 1 1 auto;
-			
+
 			img {
 				margin: 0 auto;
 			}
@@ -86,10 +86,10 @@
 		font-size: 18px;
 		font-weight: 500;
 	}
-	
+
 	&__list {
 		flex: 1 1 auto;
-		
+
 		a {
 			font-size: 18px;
 			color: #C47A2C;
@@ -132,7 +132,7 @@
 
 		@media (max-width: 1200px) {
 			flex: 1 1 auto;
-			
+
 			img {
 				margin: 0 auto;
 			}
@@ -146,4 +146,3 @@
 .item-main-block-banner {
 	margin: 0px 0px 32px 0px;
 }
-

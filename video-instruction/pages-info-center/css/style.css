@@ -1,3 +1,17 @@
+.container-section {
+  margin-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .container-section {
+    margin-bottom: 50px;
+  }
+}
+
+.container-section:last-child {
+  margin-bottom: 0;
+}
+
 .title-h1 {
   margin: 0px 0px 30px 0px;
   font-size: 32px;
@@ -30,18 +44,37 @@
   line-height: 1.2;
 }
 
-.container-section {
-  margin-bottom: 80px;
+.button-full {
+  padding: 15px 50px;
+  display: inline-block;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+  text-align: center;
+  background-color: #C47A2C;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
-@media (max-width: 768px) {
-  .container-section {
-    margin-bottom: 50px;
-  }
+.button-full:hover {
+  background-color: #F9B974;
 }
 
-.container-section:last-child {
-  margin-bottom: 0;
+.button-empty {
+  padding: 11px 50px;
+  display: inline-block;
+  font-size: 16px;
+  color: #000000;
+  font-weight: 500;
+  text-align: center;
+  background-color: #ffffff;
+  border: 4px solid #C47A2C;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.button-empty:hover {
+  border-color: #F9B974;
 }
 
 .flex-container {
@@ -126,9 +159,16 @@
 
 .card-2 {
   height: 100%;
-  padding: 30px 20px;
+  padding: 30px 10px 20px;
   border: 1px solid #D1D2D4;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .card-2__icon {
@@ -141,8 +181,20 @@
 }
 
 .card-2__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   font-size: 14px;
   font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .event-list {
@@ -273,4 +325,8 @@
 .item-accordion-1__body ul li {
   list-style-type: disc;
   padding-left: 0;
+}
+
+.item-accordion-1__body .btn-send-resume {
+  margin-top: 40px;
 }
