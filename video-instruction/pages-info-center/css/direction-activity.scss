@@ -1,0 +1,150 @@
+$color-gold: #C47A2C;
+
+.item-direction {
+	padding: 0px 0px 32px 0px;
+	height: 100%;
+
+	&__wrapper {
+		min-height: 320px;
+		height: 100%;
+		background-color: #ffffff;
+		border: 1px solid $color-gold;
+		display: flex;
+		overflow: hidden;
+
+		&:hover {
+			.item-direction__list {
+				right: 0;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	&__info {
+		flex: 0 1 50%;
+		margin: 30px 0px 30px 30px;
+	}
+
+	&__title {
+		margin: 0px 0px 16px 0px;
+		color: #0A0A0A;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		margin: 0px 0px 30px 0px;
+		color: #808181;
+	}
+
+	&__link {
+		font-size: 18px;
+		color: #0A0A0A;
+		position: relative;
+		z-index: 2;
+		transition: all 0.3s ease 0s;
+
+		&:before {
+			content:'';
+			width: 130px;
+			height: 3px;
+			background-color: $color-gold;
+			position: absolute;
+			bottom: -3px;
+			left: 0;
+			z-index: 1;
+			transition: all 0.3s ease 0s;
+		}
+
+		&:hover {
+			&:before {
+				width: 100px;
+			}
+		}
+	}
+
+	&__right-block {
+		flex: 0 1 50%;
+		display: flex;
+		justify-content:center;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
+
+		img {
+			height: auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&__list {
+		width: 100%;
+		height: 100%;
+		margin-bottom: 0;
+		padding: 30px 30px 30px 0px;
+		position: relative;
+		right: -200%;
+		opacity: 0;
+		background-color: #fff;
+		visibility: hidden;
+		transition: all 0.3s ease 0s;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		li {
+			margin: 0px 0px 12px 0px;
+
+			a {
+				color: $color-gold;
+
+				&:hover {
+					color: #222222;
+				}
+			}
+
+			&:last-child {
+				margin: 0px 0px 0px 0px;
+			}
+		}
+	}
+
+	@media (max-width: 992px) {
+		&__wrapper {
+			min-height: auto;
+		}
+
+		&__right-block img {
+			display: none;
+		}
+
+		&__list {
+			right: 0;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	@media (max-width: 768px) {
+		&__info {
+			margin: 20px 0px 20px 20px;
+		}
+
+		&__list {
+			padding: 20px 20px 20px 0px;
+		}
+	}
+
+	@media (max-width: 565px) {
+		&__wrapper {
+			display: block;
+		}
+
+		&__info {
+			margin: 20px 20px 10px 20px;
+		}
+	}
+}
