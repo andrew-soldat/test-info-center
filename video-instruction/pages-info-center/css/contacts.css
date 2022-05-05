@@ -82,16 +82,10 @@
 }
 
 .social__link {
-  margin: 0 50px 25px;
+  margin: 0 45px 25px;
   color: #808181;
   font-size: 24px;
   font-weight: 500;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.social__link:hover {
-  color: #C47A2C;
 }
 
 @media (max-width: 565px) {

@@ -100,8 +100,8 @@
   opacity: 0;
   background-color: #fff;
   visibility: hidden;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
