@@ -69,15 +69,10 @@ $color-gold: #C47A2C;
 	}
 
 	&__link {
-		margin: 0 50px 25px;
+		margin: 0 45px 25px;
 		color: #808181;
 		font-size: 24px;
 		font-weight: 500;
-		transition: all 0.3s ease 0s;
-
-		&:hover {
-			color: $color-gold;
-		}
 	}
 
 	@media (max-width: 565px) {
