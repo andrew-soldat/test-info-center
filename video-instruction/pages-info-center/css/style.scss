@@ -31,8 +31,10 @@ $color-gold: #C47A2C;
 .decor {
 	transition: all 0.3s ease 0s;
 
-	&:hover {
-		box-shadow: 14px -14px transparent, 15px -15px $color-gold;
+	@media (hover: hover) {
+		&:hover {
+			box-shadow: 14px -14px transparent, 15px -15px $color-gold;
+		}
 	}
 }
 .container-section {
@@ -363,19 +365,15 @@ $color-gold: #C47A2C;
 
 	&__title {
 		margin: 0;
+		color:#000000;
 		font-size: 18px;
 		font-weight: 500;
-		color:#000000;
+		line-height: 1.35;
 	}
 
 	@media (max-width: 565px) {
-		&__wrapper {
-			flex-direction: column;
-			align-items: center;
-		}
-
 		&__photo {
-			width: 175px;
+			display: none;
 		}
 
 		&__content {

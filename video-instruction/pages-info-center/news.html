@@ -32,28 +32,36 @@
 							<div class="right_block narrow_N">
 
 								<section class="container-section">
-									<form class="form-news">
-										<div class="item-category">
-											<input type="radio" id="news-1" name="category-news" value="all" checked>
-											<label for="news-1">Все новости</label>
-										 </div>
-										 <div class="item-category">
-											<input type="radio" id="news-2" name="category-news" value="international">
-											<label for="news-2">Международные новости</label>
-										 </div>
-										 <div class="item-category">
-											<input type="radio" id="news-3" name="category-news" value="legislation">
-											<label for="news-3">Новости законодательства</label>
-										 </div>
-										 <div class="item-category">
-											<input type="radio" id="news-4" name="category-news" value="enterprises">
-											<label for="news-4">Новости предприятия</label>
-										 </div>
-										 <div class="item-category">
-											<input type="radio" id="news-5" name="category-news" value="economic">
-											<label for="news-5">Экономические новости</label>
-										 </div>
-									</form>
+									<div class="form-news">
+										<div class="form-news__header">
+											<div class="form-news__title-category">Все новости</div>
+											<div class="form-news__button">
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+										</div>
+										<form class="form-news__body">
+											<div class="item-category">
+												<input type="radio" id="news-1" name="category-news" value="all" checked>
+												<label for="news-1" class="item-category__label">Все новости</label>
+											</div>
+											<div class="item-category">
+												<input type="radio" id="news-2" name="category-news" value="international">
+												<label for="news-2" class="item-category__label">Международные новости</label>
+											</div>
+											<div class="item-category">
+												<input type="radio" id="news-3" name="category-news" value="legislation">
+												<label for="news-3" class="item-category__label">Новости законодательства</label>
+											</div>
+											<div class="item-category">
+												<input type="radio" id="news-4" name="category-news" value="enterprises">
+												<label for="news-4" class="item-category__label">Новости предприятия</label>
+											</div>
+											<div class="item-category">
+												<input type="radio" id="news-5" name="category-news" value="economic">
+												<label for="news-5" class="item-category__label" value="economic">Экономические новости</label>
+											</div>
+										</form>
+									</div>
 									<div class="row flexbox">
 										<div class="col-md-6 col-xs-12">
 											<section class="item-news">
@@ -142,6 +150,23 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			const formNewsButton = document.querySelector('.form-news__button');
+			const formBody = document.querySelector('.form-news__body');
+			const labels = document.querySelectorAll('.item-category__label');
+
+			formNewsButton.addEventListener('click', () => {
+				formNewsButton.classList.toggle('active');
+				formBody.classList.toggle('active');
+			})
+
+			labels.forEach((label) => {
+				label.addEventListener('click', function (e) {
+					formNewsButton.classList.remove('active');
+					formBody.classList.remove('active');
+				});
+			});
+		</script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="./../js/aspro-allcorp2.js"></script>
    </body>
