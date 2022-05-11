@@ -136,6 +136,26 @@ $color-gold: #C47A2C;
 		}
 	}
 }
+.link-card {
+	min-height: 82px;
+	height: 100%;
+	padding: 16px;
+	font-size: 16px;
+	color: #000000;
+	text-align: center;
+	border: 1px solid $color-gold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&:hover {
+		color: $color-gold;
+	}
+
+	@media (max-width: 700px) {
+		min-height: auto;
+	}
+}
 .card-1 {
 	height: 100%;
 	padding: 16px;
