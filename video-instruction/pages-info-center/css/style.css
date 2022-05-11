@@ -174,6 +174,35 @@
   }
 }
 
+.link-card {
+  min-height: 82px;
+  height: 100%;
+  padding: 16px;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  border: 1px solid #C47A2C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.link-card:hover {
+  color: #C47A2C;
+}
+
+@media (max-width: 700px) {
+  .link-card {
+    min-height: auto;
+  }
+}
+
 .card-1 {
   height: 100%;
   padding: 16px;
