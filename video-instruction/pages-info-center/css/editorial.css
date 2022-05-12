@@ -589,9 +589,9 @@
   top: 50%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .editorial-team .flex-direction-nav {
-    display: block;
+    display: none;
   }
 }
 
@@ -614,7 +614,7 @@
   background: #C47A2C;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .editorial-team .flex-control-nav {
     display: none;
   }
