@@ -420,7 +420,6 @@
 		align-items: center;
 	}
 }
-
 .editorial-team {
 	.flexslider .slides {
 		display: flex;
@@ -449,9 +448,9 @@
 			top: 50%;
 		}
 	}
-	@media (max-width: 767px) {
+	@media (max-width: 991px) {
 		.flex-direction-nav {
-			display: block;
+			display: none;
 		}
 	}
 	.flex-direction-nav a.flex-prev:before {
@@ -467,7 +466,7 @@
 		background: #C47A2C;
 	}
 
-	@media (min-width: 768px) {
+	@media (min-width: 992px) {
 		.flex-control-nav {
 			display: none;
 		}
