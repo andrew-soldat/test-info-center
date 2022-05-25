@@ -1,0 +1,299 @@
+.main-block-bitrix__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-block-bitrix__content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 55%;
+          flex: 0 1 55%;
+}
+
+@media (max-width: 768px) {
+  .main-block-bitrix__content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+
+.main-block-bitrix__title {
+  margin: 0px 0px 20px 0px;
+  font-size: 40px;
+  font-weight: 700;
+  color: #C47A2C;
+}
+
+@media (max-width: 992px) {
+  .main-block-bitrix__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 565px) {
+  .main-block-bitrix__title {
+    font-size: 28px;
+  }
+}
+
+.main-block-bitrix__text {
+  margin: 0px 0px 25px 0px;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+@media (max-width: 992px) {
+  .main-block-bitrix__text {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 565px) {
+  .main-block-bitrix__text {
+    margin: 0px 0px 30px 0px;
+    font-size: 20px;
+  }
+}
+
+.main-block-bitrix__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-block-bitrix__btn a {
+  display: inline-block;
+  margin: 20px 20px 0px 0px;
+}
+
+.main-block-bitrix__btn_link {
+  display: inline-block;
+  color: #808181;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@media (max-width: 1250px) {
+  .main-block-bitrix__btn {
+    display: block;
+  }
+}
+
+.main-block-bitrix__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 45%;
+          flex: 0 1 45%;
+}
+
+.main-block-bitrix__img img {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.main-block-bitrix__img_bitrix img {
+  max-width: 600px;
+}
+
+@media (max-width: 768px) {
+  .main-block-bitrix__img {
+    display: none;
+  }
+}
+
+.our-competencies__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.our-competencies__header {
+  text-align: center;
+}
+
+.our-competencies__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.3333%;
+          flex: 0 1 33.3333%;
+  padding: 0px 15px 30px;
+}
+
+@media (max-width: 992px) {
+  .our-competencies__column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+  .our-competencies__column:nth-child(3) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+}
+
+.our-competencies__item {
+  padding: 30px;
+  border: 1px solid #dadada;
+  -webkit-box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
+          box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.our-competencies__icon {
+  margin: 0px 0px 30px 0px;
+}
+
+.our-competencies__icon i {
+  font-size: 75px;
+  color: #C47A2C;
+}
+
+.our-competencies__title {
+  margin: 0px 0px 30px 0px;
+}
+
+.our-competencies__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+@media (max-width: 767px) {
+  .bitrix-tab .tabs ul.nav.nav-tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bitrix-tab .tabs .nav.nav-tabs li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+  .bitrix-tab .tabs .tab-content {
+    padding: 30px 0px 0px 0px;
+  }
+}
+
+.bitrix-tab .nav.nav-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+}
+
+@media (max-width: 500px) {
+  .bitrix-tab .nav.nav-tabs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.bitrix-tab .tabs .nav.nav-tabs li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  z-index: 2;
+}
+
+@media (max-width: 500px) {
+  .bitrix-tab .tabs .nav.nav-tabs li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+}
+
+.bitrix-tab .tabs .nav.nav-tabs a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 20px 10px;
+  font-size: 18px;
+  color: #1d1d1b;
+  font-weight: 500;
+  text-align: center;
+  background-color: #D1D2D4;
+  border: 2px solid #D1D2D4;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.bitrix-tab .tabs .nav.nav-tabs a:hover, .bitrix-tab .tabs .nav.nav-tabs a:active {
+  -webkit-box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 5px #D1D2D4;
+          box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 5px #D1D2D4;
+}
+
+.bitrix-tab .tabs .nav.nav-tabs li.active a {
+  color: #ffffff;
+  font-weight: 500;
+  -webkit-box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 5px #C47A2C;
+          box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 5px #C47A2C;
+  pointer-events: none;
+}
+
+.bitrix-tab .tabs .nav.nav-tabs li.active a:before {
+  display: none;
+}
+
+.bitrix-tab .tabs .nav.nav-tabs li.active a,
+.bitrix-tab .tabs .nav.nav-tabs li.active a:hover,
+.bitrix-tab .tabs .nav.nav-tabs li.active a:focus {
+  background-color: #C47A2C;
+  border: 2px solid #C47A2C;
+}
+
+.bitrix-tab .tab-content > .tab-pane {
+  display: none;
+}
+
+.bitrix-tab .tab-content > .active {
+  display: block;
+}
+
+.bitrix-tab .item-accordion-1__head .title-h4 {
+  margin: 0;
+}
+
+.bitrix-tab .item-accordion-1__body ul {
+  margin-bottom: 0;
+}
+
+.bitrix-tab .item-accordion-1__body ul li:last-child {
+  margin-bottom: 0;
+}
