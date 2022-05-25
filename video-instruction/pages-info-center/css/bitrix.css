@@ -97,11 +97,13 @@
 
 .main-block-bitrix__img img {
   margin: 0 auto;
-  max-width: 400px;
+  width: 100%;
+  max-width: 400px !important;
 }
 
 .main-block-bitrix__img_bitrix img {
-  max-width: 600px;
+  width: 100%;
+  max-width: 600px !important;
 }
 
 @media (max-width: 768px) {
@@ -296,4 +298,64 @@
 
 .bitrix-tab .item-accordion-1__body ul li:last-child {
   margin-bottom: 0;
+}
+
+.item-pricing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  border: 1px solid #d1d2d4;
+  border-top: 4px solid #c47a2c;
+}
+
+.item-pricing__name {
+  padding: 20px 10px;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #808181;
+}
+
+.item-pricing__preview {
+  padding: 20px;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.item-pricing__info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 20px;
+}
+
+.item-pricing__text {
+  margin: 0px 0px 20px 0px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.item-pricing__text:last-child {
+  margin: 0px 0px 0px 0px;
+}
+
+.item-pricing__text i {
+  margin-right: 5px;
+  color: #c47a2c;
+  font-size: 24px;
+}
+
+.item-pricing__price {
+  margin: 0 30px;
+  padding: 20px 0px;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  border-top: 2px solid #c47a2c;
 }

@@ -1,3 +1,8 @@
+$color-gold: #c47a2c;
+$color-gold-light: #f9b974;
+$color-gray: #d1d2d4;
+$color-gray-black: #808181;
+
 .main-block-bitrix {
 
 	&__body {
@@ -71,11 +76,13 @@
 
 		img {
 			margin: 0 auto;
-			max-width: 400px;
+			width: 100%;
+			max-width: 400px !important;
 		}
 
 		&_bitrix img {
-			max-width: 600px;
+			width: 100%;
+			max-width: 600px !important;
 		}
 
 		@media (max-width: 768px) {
@@ -218,5 +225,57 @@
 				margin-bottom: 0;
 			}
 		}
+	}
+}
+.item-pricing {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	border: 1px solid $color-gray;
+	border-top: 4px solid $color-gold;
+
+	&__name {
+		padding: 20px 10px;
+		font-size: 24px;
+		font-weight: 700;
+		text-align: center;
+		color:#ffffff;
+		background-color: $color-gray-black;
+	}
+
+	&__preview {
+		padding: 20px;
+		font-size: 18px;
+		font-style: italic;
+	}
+
+	&__info {
+		flex: 1 1 auto;
+		padding: 20px;
+	}
+
+	&__text {
+		margin: 0px 0px 20px 0px;
+		font-weight: 500;
+		font-size: 18px;
+
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+
+		i {
+			margin-right: 5px;
+			color: $color-gold;
+			font-size: 24px;
+		}
+	}
+
+	&__price {
+		margin: 0 30px;
+		padding: 20px 0px;
+		font-size: 22px;
+		font-weight: 700;
+		text-align: center;
+		border-top: 2px solid $color-gold;
 	}
 }
