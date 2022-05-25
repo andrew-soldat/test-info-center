@@ -100,6 +100,10 @@
   max-width: 400px;
 }
 
+.main-block-bitrix__img_bitrix img {
+  max-width: 600px;
+}
+
 @media (max-width: 768px) {
   .main-block-bitrix__img {
     display: none;
