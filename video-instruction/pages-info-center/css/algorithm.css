@@ -2,7 +2,6 @@
   margin: 0px 0px 30px 0px;
   position: relative;
   width: 100%;
-  max-width: 400px;
   overflow: hidden;
 }
 
@@ -63,9 +62,14 @@
   transition: all 0.4s ease-in;
   position: relative;
   z-index: 2;
+  cursor: pointer;
 }
 
 .steps__item._active {
+  background-color: #f9b974;
+}
+
+.steps__item:hover {
   background-color: #f9b974;
 }
 
@@ -109,12 +113,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .button-steps {
   margin: 5px 5px 0px 0px;
+}
+
+@media (max-width: 380px) {
+  .button-steps {
+    padding: 15px 40px;
+  }
 }
 
 .button-steps:active {

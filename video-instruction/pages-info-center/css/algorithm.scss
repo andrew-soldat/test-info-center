@@ -10,7 +10,6 @@ $color-gray-black: #808181;
 	margin: 0px 0px 30px 0px;
    position: relative;
    width: 100%;
-   max-width: 400px;
 	overflow: hidden;
 
    &:before {
@@ -56,10 +55,15 @@ $color-gray-black: #808181;
       transition: all 0.4s ease-in;
       position: relative;
       z-index: 2;
+		cursor: pointer;
 
       &._active {
          background-color: $color-gold-light;
       }
+
+		&:hover {
+			background-color: $color-gold-light;
+		}
    }
 }
 .progress-info {
@@ -98,10 +102,14 @@ $color-gray-black: #808181;
 }
 .progress-button {
 	display: flex;
-	flex-wrap: wrap;
 }
 .button-steps {
 	margin: 5px 5px 0px 0px;
+
+
+	@media (max-width: 380px) {
+		padding: 15px 40px;
+	}
 
    &:active {
       transform: scale(0.98);

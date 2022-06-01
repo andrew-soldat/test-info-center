@@ -184,6 +184,19 @@
 			const content = document.querySelectorAll(".item-info");
 			let counterSteps = 1;
 
+			steps.forEach((step, index) => {
+				step.addEventListener("click", () => {
+					if (index + 1 > counterSteps) {
+						counterSteps = index + 1;
+					} else if ((index + 1) === counterSteps) {
+						counterSteps = counterSteps;
+					} else {
+						counterSteps = index + 1;
+					}
+					updateSteps();
+				});
+			})
+
 			nextStep.addEventListener("click", () => {
 				counterSteps++;
 				updateSteps();
@@ -213,7 +226,9 @@
 
 				if (counterSteps === 1) {
 					prevStep.disabled = true;
+					nextStep.disabled = false;
 				} else if (counterSteps === steps.length) {
+					prevStep.disabled = false;
 					nextStep.disabled = true;
 				} else {
 					prevStep.disabled = false;
