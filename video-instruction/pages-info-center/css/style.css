@@ -1,10 +1,10 @@
 :root {
   --color-white: #ffffff;
-  --color-black: var(--color-black);
+  --color-black: #000000;
   --color-gold: #c47a2c;
   --color-gold-light: #f9b974;
   --color-gray: #d1d2d4;
-  --color-gray-dark: var(--color-gray-dark);
+  --color-gray-dark: #818181;
 }
 
 .link-underline {
@@ -553,4 +553,21 @@
   .item-news__content {
     padding: 15px;
   }
+}
+
+.video-player {
+  margin: 24px 0px 0px 0px;
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.video-player iframe {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
