@@ -1,7 +1,12 @@
+:root {
+	--gold: #c47a2c;
+	--gold-light: #f9b974;
+	--gray: #d1d2d4;
+	--gray-dark: #808181;
+}
 
 .main-block {
-	background-color: #D1D2D4;
-	font-family: 'Raleway', sans-serif;
+	background-color: var(--gray);
 }
 .item-main-block {
 	padding: 0px 0px 32px 0px;
@@ -92,7 +97,7 @@
 
 		a {
 			font-size: 18px;
-			color: #C47A2C;
+			color: var(--gold);
 
 			&:hover {
 				color: #664018;
@@ -111,7 +116,7 @@
 			content:'';
 			width: 130px;
 			height: 3px;
-			background-color: #C47A2C;
+			background-color: var(--gold);
 			position: absolute;
 			bottom: -3px;
 			left: 0;
