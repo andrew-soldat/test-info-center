@@ -458,6 +458,8 @@
 .item-accordion-1__head_icon i {
   color: var(--color-gold);
   font-size: 22px;
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
 }
 
 .item-accordion-1__head.collapsed .item-accordion-1__head_icon {

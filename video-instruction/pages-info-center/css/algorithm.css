@@ -1,11 +1,11 @@
-.steps {
+.section-2 .steps {
   margin: 0px 0px 30px 0px;
   position: relative;
   width: 100%;
   overflow: hidden;
 }
 
-.steps:before {
+.section-2 .steps:before {
   content: '';
   position: absolute;
   top: 50%;
@@ -16,7 +16,7 @@
   z-index: 1;
 }
 
-.steps__line {
+.section-2 .steps__line2 {
   position: absolute;
   top: 50%;
   left: 0;
@@ -28,7 +28,7 @@
   transition: all 0.5s ease-in;
 }
 
-.steps__list {
+.section-2 .steps__list {
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,7 +41,7 @@
           justify-content: space-between;
 }
 
-.steps__item {
+.section-2 .steps__item2 {
   margin: 0;
   padding: 0;
   background-color: #ffffff;
@@ -65,67 +65,199 @@
   cursor: pointer;
 }
 
-.steps__item._active {
+.section-2 .steps__item2.active {
   background-color: #f9b974;
 }
 
-.steps__item:hover {
+.section-2 .steps__item2:hover {
   background-color: #f9b974;
 }
 
-.progress-info {
+.section-2 .progress-info {
   margin: 25px 0;
-  min-height: 200px;
+  min-height: 130px;
 }
 
-.item-info {
+.section-2 .item-info2 {
   display: none;
 }
 
-.item-info a {
+.section-2 .item-info2 a {
   font-weight: 500;
   color: #c47a2c;
 }
 
-.item-info a:hover {
+.section-2 .item-info2 a:hover {
   color: #f9b974;
 }
 
-.item-info p {
+.section-2 .item-info2 p {
   margin: 0px 0px 10px 0px;
 }
 
-.item-info._show {
+.section-2 .item-info2.show {
   display: block;
 }
 
-.item-info ul {
+.section-2 .item-info2 ul {
   padding-left: 25px;
   margin: 0px 0px 10px 0px;
 }
 
-.item-info ul li {
+.section-2 .item-info2 ul li {
   padding-left: 0;
   list-style-type: disc;
 }
 
-.progress-button {
+.section-2 .progress-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.button-steps {
+.section-2 .button-steps {
   margin: 5px 5px 0px 0px;
 }
 
 @media (max-width: 380px) {
-  .button-steps {
+  .section-2 .button-steps {
     padding: 15px 40px;
   }
 }
 
-.button-steps:active {
+.section-2 .button-steps:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.section-1 .steps {
+  margin: 0px 0px 30px 0px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.section-1 .steps:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #bdbdbd;
+  z-index: 1;
+}
+
+.section-1 .steps__line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: #c47a2c;
+  z-index: 1;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+.section-1 .steps__list {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section-1 .steps__item {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #c47a2c;
+  border-radius: 50%;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.section-1 .steps__item._active {
+  background-color: #f9b974;
+}
+
+.section-1 .steps__item:hover {
+  background-color: #f9b974;
+}
+
+.section-1 .progress-info {
+  margin: 25px 0;
+  min-height: 180px;
+}
+
+.section-1 .item-info {
+  display: none;
+}
+
+.section-1 .item-info a {
+  font-weight: 500;
+  color: #c47a2c;
+}
+
+.section-1 .item-info a:hover {
+  color: #f9b974;
+}
+
+.section-1 .item-info p {
+  margin: 0px 0px 10px 0px;
+}
+
+.section-1 .item-info._show {
+  display: block;
+}
+
+.section-1 .item-info ul {
+  padding-left: 25px;
+  margin: 0px 0px 10px 0px;
+}
+
+.section-1 .item-info ul li {
+  padding-left: 0;
+  list-style-type: disc;
+}
+
+.section-1 .progress-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-1 .button-steps {
+  margin: 5px 5px 0px 0px;
+}
+
+@media (max-width: 380px) {
+  .section-1 .button-steps {
+    padding: 15px 40px;
+  }
+}
+
+.section-1 .button-steps:active {
   -webkit-transform: scale(0.98);
           transform: scale(0.98);
 }

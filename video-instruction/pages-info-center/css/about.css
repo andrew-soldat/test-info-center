@@ -46,12 +46,12 @@
   content: '';
   width: 78px;
   height: 1px;
-  background-color: var(--color-gray);
+  background-color: #D1D2D4;
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
 .about-history__title span {
-  color: var(--color-gold);
+  color: #C47A2C;
 }
