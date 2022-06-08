@@ -90,3 +90,94 @@
 		}
 	}
 }
+.info-pks {
+	border: 1px solid #ddd;
+	overflow-x: auto;
+
+	&__header {
+		min-width: 500px;
+		.info-pks__row {
+			display: flex;
+			background-color: var(--color-gold);
+			color: var(--color-white);
+			font-weight: 700;
+
+			@media (max-width: 768px) {
+				display: block;
+			}
+		}
+	}
+
+	&__body {
+		min-width: 500px;
+
+		.info-pks__row:nth-child(even) {
+			background-color: #eff5f7;
+		}
+	}
+
+	&__row {
+		display: flex;
+
+		@media (max-width: 768px) {
+			display: block;
+		}
+	}
+
+	&__left {
+		display: flex;
+		flex: 0 0 377px;
+	}
+
+	&__number {
+		flex: 0 0 37px;
+		padding: 8px;
+	}
+
+	&__denomination {
+		flex: 0 0 122px;
+		padding: 8px;
+	}
+
+	&__version {
+		flex: 0 0 110px;
+		padding: 8px;
+	}
+
+	&__conclusion {
+		flex: 0 0 108px;
+		padding: 8px;
+	}
+
+	&__application {
+		flex: 1 1 100%;
+		padding: 8px;
+	}
+}
+.table-pks {
+	@media (max-width: 640px) {
+		overflow-x: auto;
+	}
+
+	th {
+		position: sticky;
+		top: 0;
+		background-color: var(--color-gold);
+		color: var(--color-white);
+	}
+
+	table {
+		min-width: 600px;
+		border: 1px solid #ddd;
+	}
+
+	th,
+	td {
+		vertical-align: top;
+		padding: 8px;
+	}
+
+	tr:nth-child(even) {
+		background-color: #eff5f7;
+	}
+}
