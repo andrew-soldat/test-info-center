@@ -1,6 +1,6 @@
 .vacancies__department {
   padding: 25px 0;
-  border-top: 1px solid #D1D2D4;
+  border-top: 1px solid var(--color-gray);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,7 +17,7 @@
       -ms-flex: 0 0 250px;
           flex: 0 0 250px;
   padding: 10px 25px 0px 0px;
-  color: #D1D2D4;
+  color: var(--color-gray);
   font-size: 24px;
   font-weight: 500;
   line-height: 1.3;

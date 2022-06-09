@@ -1,5 +1,3 @@
-$color-gold: #C47A2C;
-
 .item-direction {
 	padding: 0px 0px 32px 0px;
 	height: 100%;
@@ -7,8 +5,8 @@ $color-gold: #C47A2C;
 	&__wrapper {
 		min-height: 320px;
 		height: 100%;
-		background-color: #ffffff;
-		border: 1px solid $color-gold;
+		background-color: var(--color-white);
+		border: 1px solid var(--color-gold);
 		display: flex;
 		overflow: hidden;
 
@@ -28,18 +26,18 @@ $color-gold: #C47A2C;
 
 	&__title {
 		margin: 0px 0px 16px 0px;
-		color: #0A0A0A;
+		color: var(--color-black);
 		text-transform: uppercase;
 	}
 
 	&__text {
 		margin: 0px 0px 30px 0px;
-		color: #808181;
+		color: var(--color-gray-dark);
 	}
 
 	&__link {
 		font-size: 18px;
-		color: #0A0A0A;
+		color: var(--color-black);
 		position: relative;
 		z-index: 2;
 		transition: all 0.3s ease 0s;
@@ -48,7 +46,7 @@ $color-gold: #C47A2C;
 			content:'';
 			width: 130px;
 			height: 3px;
-			background-color: $color-gold;
+			background-color: var(--color-gold);
 			position: absolute;
 			bottom: -3px;
 			left: 0;
@@ -88,7 +86,7 @@ $color-gold: #C47A2C;
 		position: relative;
 		right: -200%;
 		opacity: 0;
-		background-color: #fff;
+		background-color: var(--color-white);
 		visibility: hidden;
 		transition: all 0.5s ease;
 		display: flex;
@@ -99,10 +97,10 @@ $color-gold: #C47A2C;
 			margin: 0px 0px 12px 0px;
 
 			a {
-				color: $color-gold;
+				color: var(--color-gold);
 
 				&:hover {
-					color: #222222;
+					color: var(--color-black);
 				}
 			}
 

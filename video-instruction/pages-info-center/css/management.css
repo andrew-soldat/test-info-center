@@ -30,7 +30,7 @@
 }
 
 .director__name span {
-  color: #C47A2C;
+  color: var(--color-gold);
   text-transform: uppercase;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .director__title {
-  color: #C47A2C;
+  color: var(--color-gold);
 }
 
 @media (max-width: 700px) {
@@ -103,12 +103,12 @@
 }
 
 .item-managment__name span {
-  color: #C47A2C;
+  color: var(--color-gold);
   text-transform: uppercase;
 }
 
 .item-managment__text {
   font-size: 13px;
-  color: #808181;
+  color: var(--color-gray-dark);
   font-weight: 300;
 }

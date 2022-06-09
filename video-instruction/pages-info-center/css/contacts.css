@@ -7,7 +7,7 @@
 }
 
 .contacts__title {
-  color: #323232;
+  color: var(--color-black);
 }
 
 .item-contact {
@@ -18,7 +18,7 @@
 .item-contact__title {
   margin: 0px 0px 8px 0px;
   font-size: 16px;
-  color: #C47A2C;
+  color: var(--color-gold);
   font-weight: 300;
 }
 
@@ -31,17 +31,17 @@
 }
 
 .item-contact__link a {
-  color: #222222;
+  color: var(--color-black);
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
 .item-contact__link a:hover {
-  color: #C47A2C;
+  color: var(--color-gold);
 }
 
 .item-contact__link span {
-  color: #808181;
+  color: var(--color-gray-dark);
   font-size: 14px;
   font-weight: 300;
 }
@@ -70,7 +70,7 @@
   -webkit-box-flex: 0;
       -ms-flex: 0 0 240px;
           flex: 0 0 240px;
-  color: #D1D2D4;
+  color: var(--color-gray);
 }
 
 .social__body {
@@ -83,7 +83,7 @@
 
 .social__link {
   margin: 0 45px 25px;
-  color: #808181;
+  color: var(--color-gray-dark);
   font-size: 24px;
   font-weight: 500;
 }

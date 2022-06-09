@@ -5,15 +5,10 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./../css/aspro-allcorp2.css" />
-      <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"> -->
       <link rel="stylesheet" href="./css/style.css" />
-      <link rel="stylesheet" href="./css/skko.css" />
 		<script src="https://use.fontawesome.com/3f519596d1.js"></script>
       <title>Нормативно-правовые акты</title>
    </head>
-
    <body>
 		<div role="main" class="main banner-auto" style="padding-bottom: 229px;">
 			<div class="page-top-wrapper color v3">
@@ -67,43 +62,5 @@
 		</div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="./../js/aspro-allcorp2.js"></script>
-		<script>
-			(function() {
-				$('.main-editorial__link a').click(function (event) {
-					var target = $(this).attr('href');
-					$('html, body').animate({ scrollTop: $(target).offset().top - 80 }, 800);
-					return false;
-				});
-
-				function getGridSize() {
-					return (window.innerWidth < 500) ? 1 :
-							(window.innerWidth < 700) ? 2 :
-							(window.innerWidth < 1000) ? 3 :
-							(window.innerWidth < 1300) ? 4 : 5;
-				}
-
-				$(function() {
-					SyntaxHighlighter.all();
-				});
-
-				$(window).load(function() {
-					$('.flexslider').flexslider({
-						animation: "slide",
-						itemWidth: 260,
-						itemMargin: 20,
-						controlNav: true,
-						// smoothHeight: true,
-						minItems: getGridSize(),
-	      			maxItems: getGridSize()
-					});
-				});
-				$window.resize(function() {
-					var gridSize = getGridSize();
-
-					flexslider.vars.minItems = gridSize;
-					flexslider.vars.maxItems = gridSize;
-				});
-			}());
-		</script>
    </body>
 </html>
