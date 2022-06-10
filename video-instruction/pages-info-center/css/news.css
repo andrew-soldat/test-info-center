@@ -16,8 +16,8 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-shadow: inset 0px -3px 0px #C47A2C;
-            box-shadow: inset 0px -3px 0px #C47A2C;
+    -webkit-box-shadow: inset 0px -3px 0px var(--color-gold);
+            box-shadow: inset 0px -3px 0px var(--color-gold);
   }
 }
 
@@ -27,13 +27,13 @@
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   font-size: 18px;
-  color: #C47A2C;
+  color: var(--color-gold);
   text-align: center;
 }
 
 .form-news__button i {
   font-size: 42px;
-  color: #C47A2C;
+  color: var(--color-gold);
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
@@ -59,7 +59,7 @@
     right: 0;
     z-index: 2;
     width: 280px;
-    background-color: #fff;
+    background-color: var(--color-white);
     -webkit-box-shadow: 0px 4px 4px rgba(106, 58, 7, 0.25), -6px 0px 4px rgba(106, 58, 7, 0.25);
             box-shadow: 0px 4px 4px rgba(106, 58, 7, 0.25), -6px 0px 4px rgba(106, 58, 7, 0.25);
   }
@@ -79,12 +79,12 @@
 }
 
 .item-category input:checked + .item-category__label {
-  color: #C47A2C;
+  color: var(--color-gold);
 }
 
 @media (min-width: 768px) {
   .item-category input:checked + .item-category__label {
-    background-color: #ffffff;
+    background-color: var(--color-white);
   }
   .item-category input:checked + .item-category__label:before {
     height: 3px;
@@ -110,10 +110,10 @@
         -ms-flex-align: center;
             align-items: center;
     font-size: 16px;
-    color: #808181;
+    color: var(--color-gray-dark);
     font-weight: 500;
-    border-right: 1px solid #ffffff;
-    background-color: #D1D2D4;
+    border-right: 1px solid var(--color-white);
+    background-color: var(--color-gray);
     text-align: center;
     cursor: pointer;
     position: relative;
@@ -124,7 +124,7 @@
     content: '';
     width: 100.5%;
     height: 0px;
-    background-color: #C47A2C;
+    background-color: var(--color-gold);
     position: absolute;
     left: 0;
     top: -3px;
