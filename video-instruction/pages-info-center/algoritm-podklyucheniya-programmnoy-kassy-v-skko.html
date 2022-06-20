@@ -7,7 +7,6 @@
 		<link rel="stylesheet" href="./../css/aspro-allcorp2.css" />
       <link href="https://fonts.googleapis.com/css?family=Roboto:300italic,400italic,500italic,700italic,400,300,500,700subset=latin,cyrillic-ext" rel="stylesheet">
 		<link rel="stylesheet" href="./css/style.css" />
-      <link rel="stylesheet" href="./css/algorithm.css" />
 		<script src="https://use.fontawesome.com/3f519596d1.js"></script>
       <title>Алгоритм подключения программной кассы в СККО</title>
    </head>
@@ -32,67 +31,63 @@
 								<section class="container-section section-2">
 									<h2 class="title-h2">Алгоритм подключения программной кассы в СККО</h2>
 									<h4 class="title-h4">Заключение договора</h4>
-									<div class="progress-wrap">
-										<div class="steps">
-											<div class="steps__line2"></div>
-											<ul class="steps__list">
-												<li class="steps__item2 active">1</li>
-												<li class="steps__item2">2</li>
-												<li class="steps__item2">3</li>
-											</ul>
+									<div class="progress-steps">
+										<div class="progress-steps__nav" id="stepsAlgorithmConnectSKKO">
+											<div class="progress-steps__line"></div>
+											<button data-step="1" class="_active">1</button>
+											<button data-step="2">2</button>
+											<button data-step="3">3</button>
 										</div>
-										<div class="progress-info">
-											<div class="item-info2 show">
+										<div class="progress-steps__contents" id="contentsAlgorithmConnectSKKO">
+											<div class="item-content-progress-steps _show" data-step="1">
 												<p>Ознакомиться с публичным договором СККО</p>
 												<p><a href="#" download><i class="fa fa-file-o"></i> Публичный договор СККО</a></p>
 											</div>
-											<div class="item-info2">
+											<div class="item-content-progress-steps" data-step="2">
 												<p>Заполнить письменное Заявление о присоединении к публичному договору СККО (2 экземпляра)</p>
 												<p><a href="#" class="item-algorithm__link" download><i class="fa fa-file-o"></i> Заявление о присоединении к публичному договору СККО</a></p>
 												<p>Приложить документы на полномочия руководителя (приказ) или доверенность (<a href="#" download><i class="fa fa-file-o"></i> образец</a>)</p>
 											</div>
-											<div class="item-info2">
+											<div class="item-content-progress-steps" data-step="3">
 												<p>Подать Заявление о присоединении в один из отделов технической поддержки СККО Предприятия</p>
 												<p><a href="#"><i class="fa fa-angle-double-right"></i> Адреса отделов технической поддержки СККО Предприятия</a></p>
 												<p>Либо направить почтой по адресу: 22035, г. Минск, пр-т. им. Машерова, 7-123</p>
 											</div>
 										</div>
-										<div class="progress-button">
-											<button class="button-full button-steps" id="prevStep" disabled>Назад</button>
-											<button class="button-full button-steps" id="nextStep">Вперёд</button>
+										<div class="progress-steps__buttons">
+											<button class="button-full button-progress-steps" id="prevStepBtnAlgorithmConnectSKKO" disabled>Назад</button>
+											<button class="button-full button-progress-steps" id="nextStepBtnAlgorithmConnectSKKO">Вперёд</button>
 										</div>
 									</div>
 								</section>
 								<section class="container-section section-1">
 									<h4 class="title-h4">Регистрация ПК в СККО</h4>
-									<div class="progress-wrap">
-										<div class="steps">
-											<div class="steps__line 1"></div>
-											<ul class="steps__list">
-												<li class="steps__item 1 _active">1</li>
-												<li class="steps__item 1">2</li>
-												<li class="steps__item 1">3</li>
-												<li class="steps__item 1">4</li>
-											</ul>
+									<div class="progress-steps">
+										<div class="progress-steps__nav" id="stepsRegistrationSKKO">
+											<div class="progress-steps__line"></div>
+											<button data-step="1" class="_active">1</button>
+											<button data-step="2">2</button>
+											<button data-step="3">3</button>
+											<button data-step="3">4</button>
 										</div>
-										<div class="progress-info">
-											<div class="item-info 1 _show">
+										<div class="progress-steps__contents" id="contentsRegistrationSKKO">
+											<div class="item-content-progress-steps _show" data-step="1">
 												<p>Заявка на регистрацию ПК в СККО (2 экземпляра)</p>
 												<p><a href="#" download><i class="fa fa-file-o"></i> Форма заявки на регистрацию ПК</a></p>
 												<p><a href="#"><i class="fa fa-angle-double-right"></i> Способы подачи заявки</a></p>
 											</div>
-											<div class="item-info 1">
+											<div class="item-content-progress-steps" data-step="2">
 												<p>Копии платежных документов:</p>
 												<p><a href="#" download><i class="fa fa-file-o"></i> Форма счета на оплату услуги по регистрации ПК</a></p>
 												<p><a href="#" download><i class="fa fa-file-o"></i> Форма счета на оплату услуги по информационному обслуживанию ПК в СККО за 6 месяцев</a></p>
 												<p><a href="#" download><i class="fa fa-file-o"></i> Форма счета на оплату услуги по информационному обслуживанию ПК в СККО за 12 месяцев</a></p>
 											</div>
-											<div class="item-info 1">
+											<div class="item-content-progress-steps" data-step="3">
 												<p>Средство контроля оператора (программно-аппаратное средство)</p>
 												<p>СКО (в случае возможности его физического предоставления) - одновременно с подачей заявки</p>
 												<p><a href="#" download><i class="fa fa-file-o"></i> Акт приема-передачи СКО (2 экземпляра)</a> - только на бумажном носителе, заполняется в случае передачи СКО</p>
 											</div>
-											<div class="item-info 1">
+											<div class="item-content-progress-steps" data-step="4">
 												<h5 class="title-h4">По результатам оказания услуги по регистрации программной кассы в СККО пользователь получает:</h5>
 												<ul>
 													<li>СКО</li>
@@ -102,9 +97,9 @@
 												</ul>
 											</div>
 										</div>
-										<div class="progress-button">
-											<button class="button-full button-steps" id="prevStep1" disabled>Назад</button>
-											<button class="button-full button-steps" id="nextStep1">Вперёд</button>
+										<div class="progress-steps__buttons">
+											<button class="button-full button-progress-steps" id="prevStepBtnRegistrationSKKO" disabled>Назад</button>
+											<button class="button-full button-progress-steps" id="nextStepBtnRegistrationSKKO">Вперёд</button>
 										</div>
 									</div>
 								</section>
@@ -115,134 +110,12 @@
 				</div>
 			</div>
 		</div>
-
-		<script>
-			const nextStep1 = document.querySelector("#nextStep1");
-			const prevStep1 = document.querySelector("#prevStep1");
-			const stepsLine1 = document.querySelector(".steps__line", "1");
-			const steps1 = document.querySelectorAll(".steps__item", "1");
-			const content1 = document.querySelectorAll(".item-info", "1");
-			let counterSteps1 = 1;
-
-			steps1.forEach((step, index) => {
-				step.addEventListener("click", () => {
-					if (index + 1 > counterSteps1) {
-						counterSteps1 = index + 1;
-					} else if ((index + 1) === counterSteps1) {
-						counterSteps1 = counterSteps1;
-					} else {
-						counterSteps1 = index + 1;
-					}
-					updateSteps1();
-				});
-			})
-
-			nextStep1.addEventListener("click", () => {
-				counterSteps1++;
-				updateSteps1();
-			});
-
-			prevStep1.addEventListener("click", () => {
-				counterSteps1--;
-				updateSteps1();
-			});
-
-			function updateSteps1() {
-				steps1.forEach((step, index) => {
-					if (index < counterSteps1) {
-						step.classList.add("_active");
-					} else {
-						step.classList.remove("_active");
-					}
-				});
-
-				content1.forEach((p, index) => {
-					if (index + 1 === counterSteps1) {
-						p.classList.add("_show");
-					} else {
-						p.classList.remove("_show");
-					}
-				});
-
-				if (counterSteps1 === 1) {
-					prevStep1.disabled = true;
-					nextStep1.disabled = false;
-				} else if (counterSteps1 === steps1.length) {
-					prevStep1.disabled = false;
-					nextStep1.disabled = true;
-				} else {
-					prevStep1.disabled = false;
-					nextStep1.disabled = false;
-				}
-
-				const activesStep1 = document.querySelectorAll('._active');
-				stepsLine1.style.width = (activesStep1.length - 1) / (steps1.length - 1) * 100 + '%'
-			}
-
-			const nextStep = document.querySelector("#nextStep");
-			const prevStep = document.querySelector("#prevStep");
-			const stepsLine = document.querySelector(".steps__line2");
-			const steps = document.querySelectorAll(".steps__item2");
-			const content = document.querySelectorAll(".item-info2");
-			let counterSteps = 1;
-
-			steps.forEach((step, index) => {
-				step.addEventListener("click", () => {
-					if (index + 1 > counterSteps) {
-						counterSteps = index + 1;
-					} else if ((index + 1) === counterSteps) {
-						counterSteps = counterSteps;
-					} else {
-						counterSteps = index + 1;
-					}
-					updateSteps();
-				});
-			})
-
-			nextStep.addEventListener("click", () => {
-				counterSteps++;
-				updateSteps();
-			});
-
-			prevStep.addEventListener("click", () => {
-				counterSteps--;
-				updateSteps();
-			});
-
-			function updateSteps() {
-				steps.forEach((step, index) => {
-					if (index < counterSteps) {
-						step.classList.add("active");
-					} else {
-						step.classList.remove("active");
-					}
-				});
-
-				content.forEach((p, index) => {
-					if (index + 1 === counterSteps) {
-						p.classList.add("show");
-					} else {
-						p.classList.remove("show");
-					}
-				});
-
-				if (counterSteps === 1) {
-					prevStep.disabled = true;
-					nextStep.disabled = false;
-				} else if (counterSteps === steps.length) {
-					prevStep.disabled = false;
-					nextStep.disabled = true;
-				} else {
-					prevStep.disabled = false;
-					nextStep.disabled = false;
-				}
-
-				const activesStep = document.querySelectorAll('.active');
-				stepsLine.style.width = (activesStep.length - 1) / (steps.length - 1) * 100 + '%'
-			}
-		</script>
-
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="./../js/aspro-allcorp2.js"></script>
+		<script src="./js/main.js"></script>
+		<script>
+			new ProgressSteps("#stepsAlgorithmConnectSKKO", "#contentsAlgorithmConnectSKKO", "#prevStepBtnAlgorithmConnectSKKO", "#nextStepBtnAlgorithmConnectSKKO");
+			new ProgressSteps("#stepsRegistrationSKKO", "#contentsRegistrationSKKO", "#prevStepBtnRegistrationSKKO", "#nextStepBtnRegistrationSKKO");
+		</script>
    </body>
 </html>
