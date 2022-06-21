@@ -1,14 +1,14 @@
 class ProgressSteps {
-    constructor(isSteps, idContents, idPrevStepBtn, idNextStepBtn) {
+    constructor(idSteps, idContents, idPrevStepBtn, idNextStepBtn) {
         this.currentStep = 1;
-        this.steps = document.querySelector(isSteps);
+        this.steps = document.querySelector(idSteps);
         this.contents = document.querySelector(idContents);
         this.prevStepBtn = document.querySelector(idPrevStepBtn);
         this.nextStepBtn = document.querySelector(idNextStepBtn);
         this.totalSteps = this.steps.querySelectorAll("button").length;
 
         this.steps.querySelectorAll("button").forEach((step, index) => {
-            step.addEventListener("click", (e) => {
+            step.addEventListener("click", () => {
                 if (index + 1 > this.currentStep) {
                     this.currentStep = index + 1;
                 } else if ((index + 1) === this.currentStep) {
