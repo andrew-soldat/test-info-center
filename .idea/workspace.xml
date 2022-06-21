@@ -1,28 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c84460ce-8a2c-41c1-ad56-004cf2e3ed9c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/test-info-center.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/css/development.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/css/development.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/css/development.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/development.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/img/development.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/img/icons/competencies/01.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/img/icons/competencies/02.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/img/icons/competencies/03.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-instruction/pages-info-center/algoritm-podklyucheniya-kassovogo-oborudovaniya-k-skko.html" beforeDir="false" afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/algoritm-podklyucheniya-kassovogo-oborudovaniya-k-skko.html" afterDir="false" />
+    <list default="true" id="c84460ce-8a2c-41c1-ad56-004cf2e3ed9c" name="Changes" comment="add page development and create function ProgressSteps">
+      <change afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/ui.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-instruction/pages-info-center/algoritm-podklyucheniya-programmnoy-kassy-v-skko.html" beforeDir="false" afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/algoritm-podklyucheniya-programmnoy-kassy-v-skko.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-instruction/pages-info-center/css/algorithm.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-instruction/pages-info-center/css/algorithm.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-instruction/pages-info-center/css/editorial.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/css/editorial.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-instruction/pages-info-center/css/editorial.scss" beforeDir="false" afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/css/editorial.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-instruction/pages-info-center/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-instruction/pages-info-center/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-instruction/pages-info-center/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/css/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-instruction/pages-info-center/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-instruction/pages-info-center/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +18,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -41,20 +36,36 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/video-instruction/pages-info-center" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\BlishchAndrew\GIT\test-info-center\video-instruction\pages-info-center" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="development.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/test-info-center/video-instruction/pages-info-center/development.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/test-info-center/video-instruction/pages-info-center/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="ui.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/test-info-center/video-instruction/pages-info-center/ui.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.ui.html" />
         <item itemvalue="JavaScript Debug.development.html" />
       </list>
     </recent_temporary>
@@ -70,8 +81,18 @@
       <workItem from="1655445477498" duration="2771000" />
       <workItem from="1655448294289" duration="2709000" />
       <workItem from="1655451711367" duration="18705000" />
-      <workItem from="1655704796559" duration="7536000" />
+      <workItem from="1655704796559" duration="8460000" />
+      <workItem from="1655731632567" duration="3851000" />
+      <workItem from="1655790427505" duration="12702000" />
     </task>
+    <task id="LOCAL-00001" summary="add page development and create function ProgressSteps">
+      <created>1655712550310</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655712550310</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,18 +109,20 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add page development and create function ProgressSteps" />
+    <option name="LAST_COMMIT_MESSAGE" value="add page development and create function ProgressSteps" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/video-instruction/pages-info-center/js/main.js</url>
           <line>53</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/video-instruction/pages-info-center/js/main.js</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
