@@ -1,22 +1,37 @@
 .development-main__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .development-main__content {
-  flex: 0 0 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
 }
+
 @media (max-width: 768px) {
   .development-main__content {
-    flex: 1 1 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
   }
 }
+
 .development-main__text {
   color: var(--color-black);
   font-size: 20px;
 }
+
 .development-main__img {
-  flex: 0 0 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
 }
+
 @media (max-width: 768px) {
   .development-main__img {
     display: none;
@@ -27,26 +42,40 @@
   height: 100%;
   padding: 10px 15px 20px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 1px solid var(--color-gold);
 }
+
 .item-competencies__icon {
   margin-bottom: 10px;
 }
+
 .item-competencies__icon img {
   max-width: 203px;
 }
+
 .item-competencies__title {
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
+
 .item-project {
   height: 100%;
   padding: 24px 24px 12px 24px;
   display: block;
   border: 1px solid var(--color-gold);
 }
+
 .item-project__img {
   margin: 0px 0px 20px 0px;
 }
@@ -56,24 +85,35 @@
 }
 
 .work-process {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .work-process__img {
-  flex: 0 1 500px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 500px;
+          flex: 0 1 500px;
 }
+
 @media (max-width: 576px) {
   .work-process__img {
     display: none;
   }
 }
+
 .work-process__content {
-  flex: 0 1 600px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 600px;
+          flex: 0 1 600px;
 }
 
 .progress-steps .progress-steps__buttons {
   text-align: center;
 }
-
-/*# sourceMappingURL=development.css.map */

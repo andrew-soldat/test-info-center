@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c84460ce-8a2c-41c1-ad56-004cf2e3ed9c" name="Changes" comment="add page development and create function ProgressSteps">
-      <change afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/ui.html" afterDir="false" />
+    <list default="true" id="c84460ce-8a2c-41c1-ad56-004cf2e3ed9c" name="Changes" comment="add form and page ui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-instruction/pages-info-center/algoritm-podklyucheniya-programmnoy-kassy-v-skko.html" beforeDir="false" afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/algoritm-podklyucheniya-programmnoy-kassy-v-skko.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-instruction/pages-info-center/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-instruction/pages-info-center/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-instruction/pages-info-center/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-instruction/pages-info-center/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-instruction/pages-info-center/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-instruction/pages-info-center/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/video-instruction/pages-info-center" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../article-portal" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -83,7 +76,7 @@
       <workItem from="1655451711367" duration="18705000" />
       <workItem from="1655704796559" duration="8460000" />
       <workItem from="1655731632567" duration="3851000" />
-      <workItem from="1655790427505" duration="12702000" />
+      <workItem from="1655790427505" duration="14666000" />
     </task>
     <task id="LOCAL-00001" summary="add page development and create function ProgressSteps">
       <created>1655712550310</created>
@@ -92,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655712550310</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add form and page ui">
+      <created>1655812421215</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655812421215</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,7 +111,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add page development and create function ProgressSteps" />
-    <option name="LAST_COMMIT_MESSAGE" value="add page development and create function ProgressSteps" />
+    <MESSAGE value="add form and page ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="add form and page ui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
