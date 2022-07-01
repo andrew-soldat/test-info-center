@@ -17,13 +17,13 @@
   background-color: #F38B04;
 }
 .use-btn_yellow:hover {
-  background-color: #f38b04c7;
+  background-color: rgba(243, 139, 4, 0.7803921569);
 }
 .use-btn_green {
   background-color: #006F53;
 }
 .use-btn_green:hover {
-  background-color: #006f53bb;
+  background-color: rgba(0, 111, 83, 0.7333333333);
 }
 
 .container-use {
