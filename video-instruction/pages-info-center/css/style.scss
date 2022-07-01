@@ -777,6 +777,18 @@ input:-webkit-autofill:active {
 		min-height: 180px;
 	}
 
+	&__row {
+		display: flex;
+		justify-content: space-between;
+
+		@media (max-width: 600px) {
+			display: block;
+
+			
+		}
+
+	}
+
 	&__button {
 		display: flex;
 	}
