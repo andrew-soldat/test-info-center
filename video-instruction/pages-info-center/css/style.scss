@@ -12,6 +12,9 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
 	-webkit-box-shadow: 0 0 0 30px var(--color-white) inset !important;
 }
+ul li:before{
+	display:none;
+}
 .link-underline {
 	padding: 2px 5px;
 	position: relative;
@@ -195,32 +198,33 @@ input:-webkit-autofill:active {
 	margin: 0 -14px -28px;
 	display: flex;
 	flex-wrap: wrap;
-
 	&__col-3 {
 		flex: 0 1 25%;
 		padding: 0 14px 28px;
-
 		@media (max-width: 1300px) {
 			flex: 0 1 50%;
 		}
-
 		@media (max-width: 565px) {
 			flex: 1 1 100%;
 		}
 	}
-
 	&__col-4 {
 		flex: 0 1 33.333%;
 		padding: 0 14px 28px;
-
 		@media (max-width: 1300px) {
 			flex: 0 1 50%;
 		}
-
 		@media (max-width: 700px) {
 			flex: 1 1 100%;
 		}
 	}
+	&__col-6 {
+		flex: 0 1 50%;
+	  	padding: 0 14px 28px;
+		@media (max-width: 700px) {
+			flex: 1 1 100%;
+		}
+  }
 }
 .flex-block {
 	margin: 0 -14px -28px;
@@ -784,7 +788,7 @@ input:-webkit-autofill:active {
 		@media (max-width: 600px) {
 			display: block;
 
-			
+
 		}
 
 	}
