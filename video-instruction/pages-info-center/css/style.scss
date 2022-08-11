@@ -170,7 +170,7 @@ ul li:before{
    }
 
 	&:not([disabled]):hover {
-		background-color:var(--color-gold-light);;
+		background-color:var(--color-gold-light);
 	}
 }
 .button-empty {
@@ -191,7 +191,7 @@ ul li:before{
    }
 
 	&:not([disabled]):hover {
-		border-color:var(--color-gold-light);;
+		border-color:var(--color-gold-light);
 	}
 }
 .flex-container {
@@ -383,6 +383,27 @@ ul li:before{
 		color: var(--color-black);
 		font-size: 20px;
 		font-weight: 500;
+	}
+}
+.link-card-4 {
+	height: 100%;
+	padding: 45px 15px;
+	font-size: 24px;
+	font-weight: 500;
+	color: var(--color-gold);
+	text-align: center;
+	border: 1px solid var(--color-gold);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&:hover {
+		color: var(--color-gold);
+	}
+
+	@media (max-width: 700px) {
+		padding: 25px 15px;
+		font-size: 20px;
 	}
 }
 .event-list {
