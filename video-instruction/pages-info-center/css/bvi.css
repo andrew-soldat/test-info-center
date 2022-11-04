@@ -3977,4 +3977,26 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
   background-color: #ffffff !important;
 }
 
+html body .bvi-body .col-lg-6 {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  html body .bvi-body .col-lg-1, html body .bvi-body .col-lg-10, html body .bvi-body .col-lg-11, html body .bvi-body .col-lg-2, html body .bvi-body .col-lg-3, html body .bvi-body .col-lg-4, html body .bvi-body .col-lg-5, html body .bvi-body .col-lg-6, html body .bvi-body .col-lg-7, html body .bvi-body .col-lg-8, html body .bvi-body .col-lg-9 {
+    float: none;
+  }
+}
+html body .bvi-body .item-main-block-banner {
+  display: none;
+}
+html body .bvi-body div {
+  display: block;
+}
+html body .bvi-body .item-main-block__title {
+  min-height: auto;
+  margin: 0px 0px 30px 0px;
+}
+html body .bvi-body .about-history__description {
+  margin: 0;
+}
+
 /*# sourceMappingURL=bvi.css.map */

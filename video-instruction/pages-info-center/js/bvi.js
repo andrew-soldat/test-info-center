@@ -14,7 +14,7 @@
             'bvi_images': true,
             'bvi_reload': false,
             'bvi_fixed': true,
-            'bvi_tts': true,
+            // 'bvi_tts': true,
             'bvi_flash_iframe': true,
             'bvi_hide': false
         }, options);
@@ -28,12 +28,12 @@
         var check_bvi_font_size;
         var check_bvi_images;
         var check_bvi_fixed;
-        var check_bvi_tts;
+        // var check_bvi_tts;
         var check_bvi_flash_iframe;
         var check_bvi_hide;
         var checkError;
-        var bvi_tts_synth = window.speechSynthesis;
-        var bvi_tts_support_browser = (bvi_tts_synth !== undefined) ? true : false;
+        // var bvi_tts_synth = window.speechSynthesis;
+        // var bvi_tts_support_browser = (bvi_tts_synth !== undefined) ? true : false;
         var sm = '576';
         var md = '768';
         var lg = '992';
@@ -42,19 +42,19 @@
 
         console.log('Bvi console: ready Button visually impaired v2.0');
 
-        if (bvi_tts_support_browser) {
-            setInterval(function () {
-                if (bvi_tts_synth.speaking == false) {
-                    $('.bvi-tts-play').removeClass('disabled');
-                    $('.bvi-tts-pause').addClass('disabled');
-                    $('.bvi-tts-resume').addClass('disabled');
-                    $('.bvi-tts-stop').addClass('disabled');
-                }
-            }, 1000);
-            console.log('Bvi console: Чтение речи поддерживается в данной браузере');
-        } else {
-            console.log('Bvi console: Чтение речи не поддерживается в данном браузере');
-        }
+        // if (bvi_tts_support_browser) {
+        //     // setInterval(function () {
+        //         if (bvi_tts_synth.speaking == false) {
+        //             $('.bvi-tts-play').removeClass('disabled');
+        //             $('.bvi-tts-pause').addClass('disabled');
+        //             $('.bvi-tts-resume').addClass('disabled');
+        //             $('.bvi-tts-stop').addClass('disabled');
+        //         }
+        //     // }, 1000);
+        //     console.log('Bvi console: Чтение речи поддерживается в данной браузере');
+        // } else {
+        //     console.log('Bvi console: Чтение речи не поддерживается в данном браузере');
+        // }
 
         $(window).on('resize', function () {
             var width_resize = (window.innerWidth > 0) ? window.innerWidth : screen.width;
@@ -92,76 +92,76 @@
             return false;
         }
 
-        function bvi_tts_speak(text) {
-            if (Cookies.get('bvi-tts') === 'true' && bvi_tts_support_browser) {
-                bvi_tts_synth.cancel();
-                var voices = bvi_tts_synth.getVoices();
-                var chunkLength = 120;
-                var pattRegex = new RegExp('^[\\s\\S]{' + Math.floor(chunkLength / 2) + ',' + chunkLength + '}[.!?,]{1}|^[\\s\\S]{1,' + chunkLength + '}$|^[\\s\\S]{1,' + chunkLength + '} ');
-                var $array = [];
-                var $text = text;
-
-                while ($text.length > 0) {
-                    $array.push($text.match(pattRegex)[0]);
-                    $text = $text.substring($array[$array.length - 1].length);
-                }
-
-                $.each($array, function () {
-                    var speechUtterance = new SpeechSynthesisUtterance(this.trim());
-                    speechUtterance.volume = 1;
-                    speechUtterance.rate = 1;
-                    speechUtterance.pitch = 1;
-                    speechUtterance.lang = 'ru-RU';
-
-                    speechUtterance.onstart = function (event) {
-                        //console.log('Start called for: ' + event.utterance.text + '-' + event.charIndex);
-                    };
-
-                    speechUtterance.onend = function (event) {
-                        //console.log(event.name + ' end ' + event.elapsedTime + ' milliseconds.');
-                    };
-
-                    speechUtterance.onpause = function (event) {
-                        //console.log(event.name + ' pause ' + event.elapsedTime + ' milliseconds.');
-                    };
-
-                    speechUtterance.onresume = function (event) {
-                        //console.log(event.name + ' resume ' + event.elapsedTime + ' milliseconds.');
-                    };
-
-                    speechUtterance.onboundary = function (event) {
-                        /*
-                        var world = bvi_getWordAt(event.utterance.text, event.charIndex);
-                        var src_str = $(id).text();
-                        var term = world.replace(/(\s+)/, "(<[^>]+>)*$1(<[^>]+>)*");
-                        var pattern = new RegExp("(" + term + ")", "gi");
-                        src_str = src_str.replace(pattern, "<mark>$1</mark>");
-                        src_str = src_str.replace(/(<mark>[^<>]*)((<[^>]+>)+)([^<>]*<\/mark>)/, "$1</mark>$2<mark>$4");
-                        $(id).html(src_str);
-                        console.log(event.utterance.text);
-                        */
-                    };
-
-                    for (var i = 0; i < voices.length; i++) {
-                        if (voices[i].lang === 'ru-RU' && voices[i].voiceURI === 'Google русский') {
-                            speechUtterance.voice = voices[i];
-                            speechUtterance.voiceURI = voices[i].voiceURI;
-                        } else if (voices[i].lang === 'ru-RU' && voices[i].voiceURI === 'Microsoft Irina Desktop - Russian') {
-                            speechUtterance.voice = voices[i];
-                            speechUtterance.voiceURI = voices[i].voiceURI;
-                        } else if (voices[i].lang === 'ru-RU' && voices[i].voiceURI === 'urn:moz-tts:sapi:Microsoft Irina Desktop - Russian?ru-RU') {
-                            speechUtterance.voice = voices[i];
-                            speechUtterance.voiceURI = voices[i].voiceURI;
-                        } else if (voices[i].lang === 'ru-RU' && voices[i].voiceURI === 'com.apple.speech.synthesis.voice.yuri') {
-                            speechUtterance.voice = voices[i];
-                            speechUtterance.voiceURI = voices[i].voiceURI;
-                        }
-                    }
-
-                    bvi_tts_synth.speak(speechUtterance);
-                });
-            }
-        }
+        // function bvi_tts_speak(text) {
+        //     if (Cookies.get('bvi-tts') === 'true' && bvi_tts_support_browser) {
+        //         bvi_tts_synth.cancel();
+        //         var voices = bvi_tts_synth.getVoices();
+        //         var chunkLength = 120;
+        //         var pattRegex = new RegExp('^[\\s\\S]{' + Math.floor(chunkLength / 2) + ',' + chunkLength + '}[.!?,]{1}|^[\\s\\S]{1,' + chunkLength + '}$|^[\\s\\S]{1,' + chunkLength + '} ');
+        //         var $array = [];
+        //         var $text = text;
+        //
+        //         while ($text.length > 0) {
+        //             $array.push($text.match(pattRegex)[0]);
+        //             $text = $text.substring($array[$array.length - 1].length);
+        //         }
+        //
+        //         $.each($array, function () {
+        //             var speechUtterance = new SpeechSynthesisUtterance(this.trim());
+        //             speechUtterance.volume = 1;
+        //             speechUtterance.rate = 1;
+        //             speechUtterance.pitch = 1;
+        //             speechUtterance.lang = 'ru-RU';
+        //
+        //             speechUtterance.onstart = function (event) {
+        //                 //console.log('Start called for: ' + event.utterance.text + '-' + event.charIndex);
+        //             };
+        //
+        //             speechUtterance.onend = function (event) {
+        //                 //console.log(event.name + ' end ' + event.elapsedTime + ' milliseconds.');
+        //             };
+        //
+        //             speechUtterance.onpause = function (event) {
+        //                 //console.log(event.name + ' pause ' + event.elapsedTime + ' milliseconds.');
+        //             };
+        //
+        //             speechUtterance.onresume = function (event) {
+        //                 //console.log(event.name + ' resume ' + event.elapsedTime + ' milliseconds.');
+        //             };
+        //
+        //             speechUtterance.onboundary = function (event) {
+        //                 /*
+        //                 var world = bvi_getWordAt(event.utterance.text, event.charIndex);
+        //                 var src_str = $(id).text();
+        //                 var term = world.replace(/(\s+)/, "(<[^>]+>)*$1(<[^>]+>)*");
+        //                 var pattern = new RegExp("(" + term + ")", "gi");
+        //                 src_str = src_str.replace(pattern, "<mark>$1</mark>");
+        //                 src_str = src_str.replace(/(<mark>[^<>]*)((<[^>]+>)+)([^<>]*<\/mark>)/, "$1</mark>$2<mark>$4");
+        //                 $(id).html(src_str);
+        //                 console.log(event.utterance.text);
+        //                 */
+        //             };
+        //
+        //             for (var i = 0; i < voices.length; i++) {
+        //                 if (voices[i].lang === 'ru-RU' && voices[i].voiceURI === 'Google русский') {
+        //                     speechUtterance.voice = voices[i];
+        //                     speechUtterance.voiceURI = voices[i].voiceURI;
+        //                 } else if (voices[i].lang === 'ru-RU' && voices[i].voiceURI === 'Microsoft Irina Desktop - Russian') {
+        //                     speechUtterance.voice = voices[i];
+        //                     speechUtterance.voiceURI = voices[i].voiceURI;
+        //                 } else if (voices[i].lang === 'ru-RU' && voices[i].voiceURI === 'urn:moz-tts:sapi:Microsoft Irina Desktop - Russian?ru-RU') {
+        //                     speechUtterance.voice = voices[i];
+        //                     speechUtterance.voiceURI = voices[i].voiceURI;
+        //                 } else if (voices[i].lang === 'ru-RU' && voices[i].voiceURI === 'com.apple.speech.synthesis.voice.yuri') {
+        //                     speechUtterance.voice = voices[i];
+        //                     speechUtterance.voiceURI = voices[i].voiceURI;
+        //                 }
+        //             }
+        //
+        //             bvi_tts_synth.speak(speechUtterance);
+        //         });
+        //     }
+        // }
 
         function bvi_getWordAt(str, pos) {
             str = String(str);
@@ -174,80 +174,80 @@
             return str.slice(left, right + pos);
         }
 
-        function bvi_tts_player() {
-            var bvi_tts_text_id;
-            var bvi_tts_voice_target = $(".bvi-tts");
-
-            $('.bvi-tts-link').remove();
-            $('.bvi-tts-text').contents().unwrap();
-
-            if (Cookies.get('bvi-tts') === 'true' && bvi_tts_support_browser) {
-                bvi_tts_voice_target.each(function (index) {
-                    bvi_tts_text_id = 'bvi-tts-text-id-' + index;
-                    $(this).wrapInner('<div class="bvi-tts-text ' + bvi_tts_text_id + '"></div>');
-                    $(this).prepend('<div class="bvi-tts-link bvi-tts-link-id-' + index + '" data-bvi-tts-class-text=".' + bvi_tts_text_id + '" data-bvi-tts-link-id=".bvi-tts-link-id-' + index + '">\n' +
-                        '    <a href="#" class="bvi-tts-play bvi-link">Воспроизвести</a>\n' +
-                        '    <a href="#" class="bvi-tts-pause bvi-link disabled">Пауза</i></a>\n' +
-                        '    <a href="#" class="bvi-tts-resume bvi-link disabled">Продолжить</i></a>\n' +
-                        '    <a href="#" class="bvi-tts-stop bvi-link disabled">Стоп</i></a>\n' +
-                        '</div>');
-                });
-
-                $('.bvi-tts-link').show();
-
-                $('.bvi-tts-play').click(function () {
-                    bvi_tts_synth.cancel();
-                    var bvi_tts_class = $(this).parent().data('bvi-tts-class-text');
-                    var bvi_tts_links_id = $(this).parent().data('bvi-tts-link-id');
-                    var bvi_tts_class_text = $(bvi_tts_class).text();
-
-                    bvi_tts_speak(bvi_tts_class_text);
-
-                    $('.bvi-tts-play').removeClass('disabled');
-                    $('.bvi-tts-pause').addClass('disabled');
-                    $('.bvi-tts-resume').addClass('disabled');
-                    $('.bvi-tts-stop').addClass('disabled');
-                    $(bvi_tts_links_id + ' .bvi-tts-play').addClass('disabled');
-                    $(bvi_tts_links_id + ' .bvi-tts-pause').removeClass('disabled');
-                    $(bvi_tts_links_id + ' .bvi-tts-stop').removeClass('disabled');
-                    return false;
-                });
-
-                $('.bvi-tts-resume').click(function () {
-                    var bvi_tts_links_id = $(this).parent().data('bvi-tts-link-id');
-                    $(bvi_tts_links_id + ' .bvi-tts-pause').removeClass('disabled');
-                    $(this).addClass('disabled');
-                    bvi_tts_synth.resume();
-                    return false;
-                });
-
-                $('.bvi-tts-pause').click(function () {
-                    var bvi_tts_links_id = $(this).parent().data('bvi-tts-link-id');
-                    $(bvi_tts_links_id + ' .bvi-tts-resume').removeClass('disabled');
-                    $(this).addClass('disabled');
-                    bvi_tts_synth.pause();
-                    return false;
-                });
-
-                $('.bvi-tts-stop').click(function () {
-                    bvi_tts_synth.cancel();
-                    var bvi_tts_links_id = $(this).parent().data('bvi-tts-link-id');
-                    $(this).addClass('disabled');
-                    $(bvi_tts_links_id + ' .bvi-tts-play').removeClass('disabled');
-                    $(bvi_tts_links_id + ' .bvi-tts-pause').addClass('disabled');
-                    $(bvi_tts_links_id + ' .bvi-tts-resume').addClass('disabled');
-                    return false;
-                });
-            } else {
-                $('.bvi-tts-link').remove();
-                $('.bvi-tts-text').contents().unwrap();
-            }
-        }
+        // function bvi_tts_player() {
+        //     var bvi_tts_text_id;
+        //     var bvi_tts_voice_target = $(".bvi-tts");
+        //
+        //     $('.bvi-tts-link').remove();
+        //     $('.bvi-tts-text').contents().unwrap();
+        //
+        //     if (Cookies.get('bvi-tts') === 'true' && bvi_tts_support_browser) {
+        //         bvi_tts_voice_target.each(function (index) {
+        //             bvi_tts_text_id = 'bvi-tts-text-id-' + index;
+        //             $(this).wrapInner('<div class="bvi-tts-text ' + bvi_tts_text_id + '"></div>');
+        //             $(this).prepend('<div class="bvi-tts-link bvi-tts-link-id-' + index + '" data-bvi-tts-class-text=".' + bvi_tts_text_id + '" data-bvi-tts-link-id=".bvi-tts-link-id-' + index + '">\n' +
+        //                 '    <a href="#" class="bvi-tts-play bvi-link">Воспроизвести</a>\n' +
+        //                 '    <a href="#" class="bvi-tts-pause bvi-link disabled">Пауза</i></a>\n' +
+        //                 '    <a href="#" class="bvi-tts-resume bvi-link disabled">Продолжить</i></a>\n' +
+        //                 '    <a href="#" class="bvi-tts-stop bvi-link disabled">Стоп</i></a>\n' +
+        //                 '</div>');
+        //         });
+        //
+        //         $('.bvi-tts-link').show();
+        //
+        //         $('.bvi-tts-play').click(function () {
+        //             bvi_tts_synth.cancel();
+        //             var bvi_tts_class = $(this).parent().data('bvi-tts-class-text');
+        //             var bvi_tts_links_id = $(this).parent().data('bvi-tts-link-id');
+        //             var bvi_tts_class_text = $(bvi_tts_class).text();
+        //
+        //             // bvi_tts_speak(bvi_tts_class_text);
+        //
+        //             $('.bvi-tts-play').removeClass('disabled');
+        //             $('.bvi-tts-pause').addClass('disabled');
+        //             $('.bvi-tts-resume').addClass('disabled');
+        //             $('.bvi-tts-stop').addClass('disabled');
+        //             $(bvi_tts_links_id + ' .bvi-tts-play').addClass('disabled');
+        //             $(bvi_tts_links_id + ' .bvi-tts-pause').removeClass('disabled');
+        //             $(bvi_tts_links_id + ' .bvi-tts-stop').removeClass('disabled');
+        //             return false;
+        //         });
+        //
+        //         $('.bvi-tts-resume').click(function () {
+        //             var bvi_tts_links_id = $(this).parent().data('bvi-tts-link-id');
+        //             $(bvi_tts_links_id + ' .bvi-tts-pause').removeClass('disabled');
+        //             $(this).addClass('disabled');
+        //             bvi_tts_synth.resume();
+        //             return false;
+        //         });
+        //
+        //         $('.bvi-tts-pause').click(function () {
+        //             var bvi_tts_links_id = $(this).parent().data('bvi-tts-link-id');
+        //             $(bvi_tts_links_id + ' .bvi-tts-resume').removeClass('disabled');
+        //             $(this).addClass('disabled');
+        //             bvi_tts_synth.pause();
+        //             return false;
+        //         });
+        //
+        //         $('.bvi-tts-stop').click(function () {
+        //             bvi_tts_synth.cancel();
+        //             var bvi_tts_links_id = $(this).parent().data('bvi-tts-link-id');
+        //             $(this).addClass('disabled');
+        //             $(bvi_tts_links_id + ' .bvi-tts-play').removeClass('disabled');
+        //             $(bvi_tts_links_id + ' .bvi-tts-pause').addClass('disabled');
+        //             $(bvi_tts_links_id + ' .bvi-tts-resume').addClass('disabled');
+        //             return false;
+        //         });
+        //     } else {
+        //         $('.bvi-tts-link').remove();
+        //         $('.bvi-tts-text').contents().unwrap();
+        //     }
+        // }
 
         function bvi_click() {
             $("#bvi-panel-close, .bvi-panel-close, #bvi-toggler-close").click(function () {
 
-                bvi_tts_speak('Обычная версия сайта');
+                // bvi_tts_speak('Обычная версия сайта');
 
                 if (Cookies.get("bvi-reload") === 'true') {
                     document.location.reload(true);
@@ -296,7 +296,7 @@
                 $('.bvi-panel').toggle(0);
                 $('.bvi-link-top').toggle(0);
                 set('data-bvi-panel-hide', 'bvi-panel-hide', true);
-                bvi_tts_speak('Панель скрыта');
+                // bvi_tts_speak('Панель скрыта');
                 return false;
             });
 
@@ -304,28 +304,28 @@
                 $('.bvi-panel').toggle(0);
                 $('.bvi-link-top').toggle(0);
                 set('data-bvi-panel-hide', 'bvi-panel-hide', false);
-                bvi_tts_speak('Панель открыта');
+                // bvi_tts_speak('Панель открыта');
                 return false;
             });
 
             $('#bvi-setting').click(function () {
                 $('.bvi-setting-menu').toggle(0);
                 $(this).toggleClass("active");
-                bvi_tts_speak('Дополнительные настройки');
+                // bvi_tts_speak('Дополнительные настройки');
                 return false;
             });
 
             $('#bvi-toggler').click(function () {
                 $('.bvi-panel-container').toggle(0);
                 $(this).toggleClass("active");
-                bvi_tts_speak('Меню');
+                // bvi_tts_speak('Меню');
                 return false;
             });
 
             $('#bvi-setting-close').click(function () {
                 $('.bvi-setting-menu').toggle(0);
                 $('#bvi-setting').toggleClass("active");
-                bvi_tts_speak('Дополнительные настройки закрыты');
+                // bvi_tts_speak('Дополнительные настройки закрыты');
                 return false;
             });
 
@@ -335,7 +335,7 @@
                 $('#bvi-font-size').text(size);
                 if (size != 0) {
                     set('data-bvi-size', 'bvi-font-size', size);
-                    bvi_tts_speak('Размер шрифта уменьшен');
+                    // bvi_tts_speak('Размер шрифта уменьшен');
                 }
                 return false;
             });
@@ -346,7 +346,7 @@
                 $('#bvi-font-size').text(size);
                 if (size != 40) {
                     set('data-bvi-size', 'bvi-font-size', size);
-                    bvi_tts_speak('Размер шрифта увеличен');
+                    // bvi_tts_speak('Размер шрифта увеличен');
                 }
                 return false;
             });
@@ -354,144 +354,144 @@
             $("#bvi-theme-white").click(function () {
                 $(this).addClass('active').siblings().removeClass('active');
                 set('data-bvi-theme', 'bvi-theme', 'white');
-                bvi_tts_speak('Цвет сайта черным по белому');
+                // bvi_tts_speak('Цвет сайта черным по белому');
                 return false;
             });
 
             $("#bvi-theme-black").click(function () {
                 $(this).addClass('active').siblings().removeClass('active');
                 set('data-bvi-theme', 'bvi-theme', 'black');
-                bvi_tts_speak('Цвет сайта белым по черному');
+                // bvi_tts_speak('Цвет сайта белым по черному');
                 return false;
             });
 
             $("#bvi-theme-blue").click(function () {
                 $(this).addClass('active').siblings().removeClass('active');
                 set('data-bvi-theme', 'bvi-theme', 'blue');
-                bvi_tts_speak('Цвет сайта тёмно-синим по голубому');
+                // bvi_tts_speak('Цвет сайта тёмно-синим по голубому');
                 return false;
             });
 
             $("#bvi-theme-brown").click(function () {
                 $(this).addClass('active').siblings().removeClass('active');
                 set('data-bvi-theme', 'bvi-theme', 'brown');
-                bvi_tts_speak('Цвет сайта коричневым по бежевому');
+                // bvi_tts_speak('Цвет сайта коричневым по бежевому');
                 return false;
             });
 
             $("#bvi-theme-green").click(function () {
                 $(this).addClass('active').siblings().removeClass('active');
                 set('data-bvi-theme', 'bvi-theme', 'green');
-                bvi_tts_speak('Цвет сайта зеленым по тёмно-коричневому');
+                // bvi_tts_speak('Цвет сайта зеленым по тёмно-коричневому');
                 return false;
             });
 
-            $('#bvi-images-true').click(function () {
-                $(this).addClass('active').siblings().removeClass('active');
-                set('data-bvi-images', 'bvi-images', true);
-                bvi_tts_speak('Изображения включены');
-                return false;
-            });
-
-            $('#bvi-images-false').click(function () {
-                $(this).addClass('active').siblings().removeClass('active');
-                set('data-bvi-images', 'bvi-images', false);
-                bvi_tts_speak('Изображения выключены');
-                return false;
-            });
-
-            $('#bvi-images-grayscale').click(function () {
-                $(this).addClass('active').siblings().removeClass('active');
-                set('data-bvi-images', 'bvi-images', 'grayscale');
-                bvi_tts_speak('Изображения чёрно-белые');
-                return false;
-            });
+            // $('#bvi-images-true').click(function () {
+            //     $(this).addClass('active').siblings().removeClass('active');
+            //     set('data-bvi-images', 'bvi-images', true);
+            //     bvi_tts_speak('Изображения включены');
+            //     return false;
+            // });
+            //
+            // $('#bvi-images-false').click(function () {
+            //     $(this).addClass('active').siblings().removeClass('active');
+            //     set('data-bvi-images', 'bvi-images', false);
+            //     bvi_tts_speak('Изображения выключены');
+            //     return false;
+            // });
+            //
+            // $('#bvi-images-grayscale').click(function () {
+            //     $(this).addClass('active').siblings().removeClass('active');
+            //     set('data-bvi-images', 'bvi-images', 'grayscale');
+            //     bvi_tts_speak('Изображения чёрно-белые');
+            //     return false;
+            // });
 
             $("#bvi-line-height-normal").click(function () {
                 $(this).addClass('active').siblings().removeClass('active');
                 set('data-bvi-line-height', 'bvi-line-height', 'normal');
-                bvi_tts_speak('Междустрочный интервал cтандартный');
+                // bvi_tts_speak('Междустрочный интервал cтандартный');
                 return false;
             });
 
             $("#bvi-line-height-average").click(function () {
                 $(this).addClass('active').siblings().removeClass('active');
                 set('data-bvi-line-height', 'bvi-line-height', 'average');
-                bvi_tts_speak('Междустрочный интервал средний');
+                // bvi_tts_speak('Междустрочный интервал средний');
                 return false;
             });
 
             $("#bvi-line-height-big").click(function () {
                 $(this).addClass('active').siblings().removeClass('active');
                 set('data-bvi-line-height', 'bvi-line-height', 'big');
-                bvi_tts_speak('Междустрочный интервал большой');
+                // bvi_tts_speak('Междустрочный интервал большой');
                 return false;
             });
 
             $("#bvi-letter-spacing-normal").click(function () {
                 $(this).addClass('active').siblings().removeClass('active');
                 set('data-bvi-letter-spacing', 'bvi-letter-spacing', 'normal');
-                bvi_tts_speak('Межбуквенный интервал одинарный');
+                // bvi_tts_speak('Межбуквенный интервал одинарный');
                 return false;
             });
 
             $("#bvi-letter-spacing-average").click(function () {
                 $(this).addClass('active').siblings().removeClass('active');
                 set('data-bvi-letter-spacing', 'bvi-letter-spacing', 'average');
-                bvi_tts_speak('Межбуквенный интервал полуторный');
+                // bvi_tts_speak('Межбуквенный интервал полуторный');
                 return false;
             });
 
             $("#bvi-letter-spacing-big").click(function () {
                 $(this).addClass('active').siblings().removeClass('active');
                 set('data-bvi-letter-spacing', 'bvi-letter-spacing', 'big');
-                bvi_tts_speak('Межбуквенный интервал двойной');
+                // bvi_tts_speak('Межбуквенный интервал двойной');
                 return false;
             });
 
             $("#bvi-font-family-arial").click(function () {
                 $(this).addClass('active').siblings().removeClass('active');
                 set('data-bvi-font-family', 'bvi-font-family', 'arial');
-                bvi_tts_speak('Шрифт без засечек');
+                // bvi_tts_speak('Шрифт без засечек');
                 return false;
             });
 
             $("#bvi-font-family-times").click(function () {
                 $(this).addClass('active').siblings().removeClass('active');
                 set('data-bvi-font-family', 'bvi-font-family', 'times');
-                bvi_tts_speak('Шрифт с засечками');
+                // bvi_tts_speak('Шрифт с засечками');
                 return false;
             });
 
             $("#bvi-flash-iframe-true").click(function () {
                 $(this).addClass('active').siblings().removeClass('active');
                 set('data-bvi-flash-iframe', 'bvi-flash-iframe', true);
-                bvi_tts_speak('Включить встроенные элементы');
+                // bvi_tts_speak('Включить встроенные элементы');
                 return false;
             });
 
             $("#bvi-flash-iframe-false").click(function () {
                 $(this).addClass('active').siblings().removeClass('active');
                 set('data-bvi-flash-iframe', 'bvi-flash-iframe', false);
-                bvi_tts_speak('Выключить встроенные элементы');
+                // bvi_tts_speak('Выключить встроенные элементы');
                 return false;
             });
 
-            $("#bvi-tts-true").click(function () {
-                $(this).addClass('active').siblings().removeClass('active');
-                set('data-bvi-tts', 'bvi-tts', true);
-                bvi_tts_speak('Синтез речи включён');
-                bvi_tts_player();
-                return false;
-            });
+            // $("#bvi-tts-true").click(function () {
+            //     $(this).addClass('active').siblings().removeClass('active');
+            //     set('data-bvi-tts', 'bvi-tts', true);
+            //     bvi_tts_speak('Синтез речи включён');
+            //     bvi_tts_player();
+            //     return false;
+            // });
 
-            $("#bvi-tts-false").click(function () {
-                $(this).addClass('active').siblings().removeClass('active');
-                set('data-bvi-tts', 'bvi-tts', false);
-                bvi_tts_speak('Синтез речи выключён');
-                bvi_tts_player();
-                return false;
-            });
+            // $("#bvi-tts-false").click(function () {
+            //     $(this).addClass('active').siblings().removeClass('active');
+            //     set('data-bvi-tts', 'bvi-tts', false);
+            //     bvi_tts_speak('Синтез речи выключён');
+            //     bvi_tts_player();
+            //     return false;
+            // });
 
             $("#bvi-settings-default").click(function () {
                 $('#bvi-theme-' + Cookies.get("bvi-theme")).removeClass('active');
@@ -508,7 +508,7 @@
                 $('#bvi-letter-spacing-' + default_setting.bvi_letter_spacing).addClass('active');
                 $('#bvi-font-family-' + default_setting.bvi_font).addClass('active');
                 $('#bvi-flash-iframe-' + default_setting.bvi_flash_iframe).addClass('active');
-                $('#bvi-tts-' + default_setting.bvi_tts).addClass('active');
+                // $('#bvi-tts-' + default_setting.bvi_tts).addClass('active');
 
                 $('#bvi-font-size').text(default_setting.bvi_font_size);
 
@@ -519,9 +519,9 @@
                 set('data-bvi-letter-spacing', 'bvi-letter-spacing', default_setting.bvi_letter_spacing);
                 set('data-bvi-font-family', 'bvi-font-family', default_setting.bvi_font);
                 set('data-bvi-flash-iframe', 'bvi-flash-iframe', default_setting.bvi_flash_iframe);
-                set('data-bvi-tts', 'bvi-tts', default_setting.bvi_tts);
-                bvi_tts_speak('Настройки по умолчанию');
-                bvi_tts_player();
+                // set('data-bvi-tts', 'bvi-tts', default_setting.bvi_tts);
+                // bvi_tts_speak('Настройки по умолчанию');
+                // bvi_tts_player();
                 return false;
             });
         }
@@ -560,7 +560,7 @@
                 Cookies.set("bvi-images", default_setting.bvi_images, {path: "/", expires: 1});
                 Cookies.set("bvi-line-height", default_setting.bvi_line_height, {path: "/", expires: 1});
                 Cookies.set("bvi-letter-spacing", default_setting.bvi_letter_spacing, {path: "/", expires: 1});
-                Cookies.set("bvi-tts", default_setting.bvi_tts, {path: "/", expires: 1});
+                // Cookies.set("bvi-tts", default_setting.bvi_tts, {path: "/", expires: 1});
                 Cookies.set("bvi-font-family", default_setting.bvi_font, {path: "/", expires: 1});
                 Cookies.set("bvi-panel-hide", default_setting.bvi_hide, {path: "/", expires: 1});
                 Cookies.set("bvi-flash-iframe", default_setting.bvi_flash_iframe, {path: "/", expires: 1});
@@ -737,16 +737,16 @@
                 if (Cookies.get('bvi-panel-active') === 'true') {
                     $(selector).addClass('bvi-hide').after($('<a href="#" class="bvi-panel-close" title="Обычная версия сайта">Обычная версия сайта</a>'));
                     panel();
-                    bvi_tts_player();
+                    // bvi_tts_player();
                     bvi_click();
                     set_active_link();
-                    if (bvi_tts_support_browser === false) {
-                        Cookies.set("bvi-tts", false, {path: "/", expires: 1});
-                        $('#bvi-tts-true').remove();
-                        $('#bvi-tts-false').remove();
-                    }
+                    // if (bvi_tts_support_browser === false) {
+                    //     Cookies.set("bvi-tts", false, {path: "/", expires: 1});
+                    //     $('#bvi-tts-true').remove();
+                    //     $('#bvi-tts-false').remove();
+                    // }
                 } else {
-                    bvi_tts_player();
+                    // bvi_tts_player();
                     $(selector).removeClass('bvi-hide');
                     $('.bvi-panel-close').remove();
                     $(".bvi-panel").remove();
@@ -784,20 +784,20 @@
                 '                <div class="bvi-title">Цвета сайта</div>\n' +
                 '                <a href="#" id="bvi-theme-white" class="bvi-link bvi-link-white " title="Черным по белому">Ц</a>\n' +
                 '                <a href="#" id="bvi-theme-black" class="bvi-link bvi-link-black" title="Белым по черному">Ц</a>\n' +
-               //  '                <a href="#" id="bvi-theme-blue" class="bvi-link bvi-link-blue" title="Темно-синим по голубому">Ц</a>\n' +
-               //  '                <a href="#" id="bvi-theme-brown" class="bvi-link bvi-link-brown" title="Коричневым по бежевому">Ц</a>\n' +
-               //  '                <a href="#" id="bvi-theme-green" class="bvi-link bvi-link-green" title="Зеленым по темно-коричневому">Ц</a>\n' +
+                '                <a href="#" id="bvi-theme-blue" class="bvi-link bvi-link-blue" title="Темно-синим по голубому">Ц</a>\n' +
+                '                <a href="#" id="bvi-theme-brown" class="bvi-link bvi-link-brown" title="Коричневым по бежевому">Ц</a>\n' +
+                '                <a href="#" id="bvi-theme-green" class="bvi-link bvi-link-green" title="Зеленым по темно-коричневому">Ц</a>\n' +
                 '            </div>\n' +
-                '            <div class="bvi-col-6 bvi-col-sm-6 bvi-col-md-3 bvi-col-lg-3 bvi-col-xl-2 bvi-text-center">\n' +
-                '                <div class="bvi-title">Изображения</div>\n' +
-                '                <a href="#" id="bvi-images-true" class="bvi-link" title="Изображения включены"><i class="bvi-images bvi-images-on"></i></a>\n' +
-                '                <a href="#" id="bvi-images-false" class="bvi-link" title="Изображения выключены"><i class="bvi-images bvi-images-off"></i></a>\n' +
-                '                <a href="#" id="bvi-images-grayscale" class="bvi-link" title="Изображения черно-белые"><i class="bvi-images bvi-images-adjust"></i></a>\n' +
-                '            </div>\n' +
+                // '            <div class="bvi-col-6 bvi-col-sm-6 bvi-col-md-3 bvi-col-lg-3 bvi-col-xl-2 bvi-text-center">\n' +
+                // '                <div class="bvi-title">Изображения</div>\n' +
+                // '                <a href="#" id="bvi-images-true" class="bvi-link" title="Изображения включены"><i class="bvi-images bvi-images-on"></i></a>\n' +
+                // '                <a href="#" id="bvi-images-false" class="bvi-link" title="Изображения выключены"><i class="bvi-images bvi-images-off"></i></a>\n' +
+                // '                <a href="#" id="bvi-images-grayscale" class="bvi-link" title="Изображения черно-белые"><i class="bvi-images bvi-images-adjust"></i></a>\n' +
+                // '            </div>\n' +
                 '            <div class="bvi-col-6 bvi-col-sm-6 bvi-col-md-3 bvi-col-lg-3 bvi-col-xl-4 bvi-text-center">\n' +
                 '                <div class="bvi-title">Дополнительно</div>\n' +
-                '                <a href="#" id="bvi-tts-true" class="bvi-link" title=""><i class="bvi-images bvi-images-volume-on"></i></a>\n' +
-                '                <a href="#" id="bvi-tts-false" class="bvi-link"><i class="bvi-images bvi-images-volume-off"></i></a>\n' +
+                // '                <a href="#" id="bvi-tts-true" class="bvi-link" title=""><i class="bvi-images bvi-images-volume-on"></i></a>\n' +
+                // '                <a href="#" id="bvi-tts-false" class="bvi-link"><i class="bvi-images bvi-images-volume-off"></i></a>\n' +
                 '                <a href="#" id="bvi-setting" class="bvi-link" title="Настройки">Настройки</a>\n' +
                 '                <a href="#" id="bvi-panel-close" class="bvi-link" title="Обычная версия сайта"><i class="bvi-images bvi-images-eye-slash"></i></a>\n' +
                 '                <a href="#" id="bvi-panel-hide" class="bvi-link" title="Скрыть панель"><i class="bvi-images bvi-images-minus-square-o"></i></a>\n' +
@@ -833,11 +833,6 @@
                 '                    <a href="#" id="bvi-settings-default" class="bvi-link" title="Вернуть стандартные настройки">Настройки\n' +
                 '                        по умолчанию</a>\n' +
                 '                    <a href="#" id="bvi-setting-close" class="bvi-link" title="Закрыть панель">Закрыть панель</a>\n' +
-                '                </div>\n' +
-                '            </div>\n' +
-                '            <div class="bvi-row bvi-mt">\n' +
-                '                <div class="bvi-col-12 bvi-text-center">\n' +
-                '                    <a href="http://bvi.isvek.ru/" class="bvi-link-copy" target="_blank" title="bvi.isvek.ru v2.0">bvi.isvek.ru</a>\n' +
                 '                </div>\n' +
                 '            </div>\n' +
                 '        </div>\n' +
@@ -933,12 +928,12 @@
             checkError = ['bvi_fixed'];
         }
 
-        if (default_setting.bvi_tts === false || default_setting.bvi_tts === true) {
-            check_bvi_tts = true;
-        } else {
-            check_bvi_tts = false;
-            checkError = ['bvi_tts'];
-        }
+        // if (default_setting.bvi_tts === false || default_setting.bvi_tts === true) {
+        //     check_bvi_tts = true;
+        // } else {
+        //     check_bvi_tts = false;
+        //     checkError = ['bvi_tts'];
+        // }
 
         if (default_setting.bvi_flash_iframe === false || default_setting.bvi_flash_iframe === true) {
             check_bvi_flash_iframe = true;
@@ -962,13 +957,13 @@
             check_bvi_images === true &&
             check_bvi_fixed === true &&
             check_bvi_flash_iframe === true &&
-            check_bvi_tts === true &&
+            // check_bvi_tts === true &&
             check_bvi_hide === true) {
             if ($(selector).length) {
                 $(selector).click(function () {
                     Cookies.set('bvi-panel-active', true, {path: "/", expires: 1});
                     active();
-                    bvi_tts_speak('Версия сайта для слабовидящих');
+                    // bvi_tts_speak('Версия сайта для слабовидящих');
                     return false;
                 });
             } else {
@@ -991,7 +986,7 @@ jQuery(document).ready(function($){
         "bvi_images" : false, // Изображения
         "bvi_reload" : false, // Перезагрузка страницы при выключении плагина
         "bvi_fixed" : false, // Фиксирование панели для слабовидящих вверху страницы
-        "bvi_tts" : true, // Синтез речи
+        // "bvi_tts" : true, // Синтез речи
         "bvi_flash_iframe" : true, // Встроенные элементы (видео, карты и тд.)
         "bvi_hide" : false // Скрывает панель для слабовидящих и показывает иконку панели.
     });

@@ -3474,3 +3474,28 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
 .bvi-body[data-bvi-theme=black] .header-search__input:focus:-moz-read-write {
 	background-color: #ffffff !important;
 }
+//------------------------------------------------------------
+html body .bvi-body {
+  .col-lg-6 {
+    width: 100%;
+  }
+  @media (min-width: 1200px) {
+    .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9 {
+      float: none;
+    }
+  }
+  .item-main-block-banner {
+    display: none;
+  }
+  div {
+    display: block;
+  }
+  // убираем отступы у блоков
+  .item-main-block__title {
+    min-height: auto;
+    margin: 0px 0px 30px 0px;
+  }
+  .about-history__description {
+    margin: 0;
+  }
+}
