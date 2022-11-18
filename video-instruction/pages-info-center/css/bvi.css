@@ -1326,16 +1326,32 @@ html body .bvi-panel .bvi-offset-11 {
     margin-left: 91.6666666667%;
   }
 }
+html body .bvi-body[data-bvi-theme=white] {
+  background-color: #ffffff !important;
+  fill: #000000 !important;
+}
+
 html body .bvi-body[data-bvi-theme=white] * {
+  background-color: #ffffff !important;
   box-shadow: none !important;
   text-shadow: none !important;
   border-color: #000000 !important;
+  color: #000000 !important;
   fill: #000000 !important;
+}
+
+html body .bvi-body[data-bvi-theme=white] * .bvi-background-image {
+  background-color: transparent !important;
 }
 
 html body .bvi-body[data-bvi-theme=white] * a {
   text-decoration: underline !important;
   outline: 0 !important;
+  color: #000000 !important;
+}
+
+html body .bvi-body[data-bvi-theme=white] * a:before {
+  display: none;
 }
 
 html body .bvi-body[data-bvi-theme=white] * a.bvi-link {
@@ -1416,8 +1432,11 @@ html body .bvi-body[data-bvi-theme=white] *:after {
 }
 
 html body .bvi-body[data-bvi-theme=white] *:before {
+  background-color: rgba(255, 255, 255, 0) !important;
+  color: #000000 !important;
   box-shadow: none !important;
   text-shadow: none !important;
+  border-color: transparent !important;
 }
 
 html body .bvi-body[data-bvi-theme=white] *::selection {
@@ -1427,6 +1446,8 @@ html body .bvi-body[data-bvi-theme=white] *::selection {
 
 html body .bvi-body[data-bvi-theme=white] * a {
   outline: 0 !important;
+  color: #000000 !important;
+  background-color: transparent !important;
   text-decoration: underline !important;
 }
 
@@ -1455,6 +1476,7 @@ html body .bvi-body[data-bvi-theme=white] * a:hover:before {
   color: #ffffff !important;
   box-shadow: none !important;
   text-shadow: none !important;
+  border-color: transparent !important;
 }
 
 html body .bvi-body[data-bvi-theme=white] * a:hover * {
@@ -1480,14 +1502,26 @@ html body .bvi-body[data-bvi-theme=white] * a:hover *:before {
 }
 
 html body .bvi-body[data-bvi-theme=white] * button, html body .bvi-body[data-bvi-theme=white] * input[type=submit], html body .bvi-body[data-bvi-theme=white] * input[type=button], html body .bvi-body[data-bvi-theme=white] * button[type=submit], html body .bvi-body[data-bvi-theme=white] * button[type=button] {
+  color: #ffffff !important;
+  background-color: #000000 !important;
+  text-decoration: none !important;
+}
+
+html body .bvi-body[data-bvi-theme=white] * button:hover.active, html body .bvi-body[data-bvi-theme=white] * input[type=button]:hover.active, html body .bvi-body[data-bvi-theme=white] * input[type=submit]:hover.active, html body .bvi-body[data-bvi-theme=white] * button[type=submit]:hover.active, html body .bvi-body[data-bvi-theme=white] * button[type=button]:hover.active {
+  color: #ffffff !important;
+  background-color: #000000 !important;
   text-decoration: none !important;
 }
 
 html body .bvi-body[data-bvi-theme=white] * button:hover:hover, html body .bvi-body[data-bvi-theme=white] * input[type=button]:hover:hover, html body .bvi-body[data-bvi-theme=white] * input[type=submit]:hover:hover, html body .bvi-body[data-bvi-theme=white] * button[type=submit]:hover:hover, html body .bvi-body[data-bvi-theme=white] * button[type=button]:hover:hover {
+  color: #ffffff !important;
+  background-color: #000000 !important;
   text-decoration: none !important;
 }
 
 html body .bvi-body[data-bvi-theme=white] * button:hover:hover *, html body .bvi-body[data-bvi-theme=white] * input[type=button]:hover:hover *, html body .bvi-body[data-bvi-theme=white] * input[type=submit]:hover:hover *, html body .bvi-body[data-bvi-theme=white] * button[type=submit]:hover:hover *, html body .bvi-body[data-bvi-theme=white] * button[type=button]:hover:hover * {
+  color: #ffffff !important;
+  background-color: #000000 !important;
   text-decoration: none !important;
 }
 
@@ -1689,10 +1723,6 @@ html body .bvi-body[data-bvi-theme=black] * button i:before, html body .bvi-body
 }
 html body .bvi-body[data-bvi-theme=black] a.bvi-background-image.bvi-panel-close:hover {
   background-color: #3a3a3a !important;
-}
-
-html body .bvi-body[data-bvi-images=false] .bvi-background-image.bvi-panel-close {
-  background: url("../img/icons/handicapped-line.svg") 0 0 no-repeat !important;
 }
 
 html body .bvi-body[data-bvi-images=false] .header-top__logo {
@@ -3964,6 +3994,11 @@ html body .bvi-body div {
   display: block;
   float: none;
 }
+@media (max-width: 992px) {
+  html body .bvi-body .content-md > .right_block.narrow_Y {
+    width: 100%;
+  }
+}
 html body .bvi-body .item-main-block__title {
   min-height: auto;
   margin: 0px 0px 30px 0px;
@@ -3983,6 +4018,10 @@ html body .bvi-body .item-news__wrapper {
 html body .bvi-body .item-news__photo {
   display: none;
 }
+html body .bvi-body .side-menu > li.active > a {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
 html body .bvi-body .item-accordion-1__head_icon {
   display: flex;
 }
@@ -3998,6 +4037,7 @@ html body .bvi-body .form-news__body {
 @media (max-width: 768px) {
   html body .bvi-body .form-news__header {
     display: flex;
+    border-bottom: 1px solid #000000 !important;
   }
   html body .bvi-body .form-news__body {
     display: none;
@@ -4006,6 +4046,170 @@ html body .bvi-body .form-news__body {
   html body .bvi-body .form-news__body.active {
     display: block;
   }
+}
+html body .bvi-body .collapse.in {
+  display: block;
+}
+html body .bvi-body .social__body {
+  display: flex;
+}
+html body .bvi-body .item-content-progress-steps {
+  display: none;
+}
+html body .bvi-body .item-content-progress-steps._show {
+  display: block;
+}
+html body .bvi-body .work-process {
+  display: block;
+}
+html body .bvi-body .item-category input:checked + .item-category__label {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+html body .bvi-body .item-category input:checked + .item-category__label:before {
+  display: none;
+}
+html body .bvi-body .item-category__label:hover {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+html body .bvi-body .item-direction__wrapper {
+  min-height: auto;
+}
+html body .bvi-body .item-direction__info {
+  margin: 20px 20px 0px 20px;
+}
+html body .bvi-body .item-direction__text {
+  margin: 0px 0px 15px 0px;
+}
+html body .bvi-body .item-direction__list {
+  right: 0;
+  opacity: 1;
+  visibility: visible;
+}
+html body .bvi-body .editorial-main__title {
+  margin: 0px 0px 20px 0px;
+}
+html body .bvi-body .editorial-main__video {
+  display: none;
+}
+html body .bvi-body .button-full {
+  padding: 13px 50px;
+  border: 2px solid #000000;
+}
+html body .bvi-body .item-about-editorial {
+  display: flex !important;
+}
+html body .bvi-body .item-about-editorial__icon {
+  display: none;
+}
+html body .bvi-body .tabs .nav.nav-tabs li.active a {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+html body .bvi-body .swiper-slide {
+  width: 100% !important;
+}
+html body .bvi-body .swiper-pointer-events {
+  touch-action: auto;
+}
+html body .bvi-body .swiper-wrapper {
+  transform: none !important;
+}
+html body .bvi-body .slider-editorial-team__arrow,
+html body .bvi-body .slider-editorial-team__pagination {
+  display: none;
+}
+html body .bvi-body .slider__arrow,
+html body .bvi-body .slider__pagination {
+  display: none;
+}
+html body .bvi-body .contacts-editorial__map {
+  display: none;
+}
+html body .bvi-body .item-accordion-1__head_icon {
+  background-color: #000000 !important;
+}
+html body .bvi-body .item-accordion-1__head_icon i {
+  background-color: #000000 !important;
+}
+html body .bvi-body .item-accordion-1__head_icon i:before {
+  color: #ffffff !important;
+}
+html body .bvi-body .skko-main__title {
+  margin: 0px 0px 20px 0px;
+}
+html body .bvi-body .skko-main__video {
+  display: none;
+}
+html body .bvi-body .progress-steps__nav {
+  display: flex !important;
+}
+html body .bvi-body .progress-steps__nav button {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+html body .bvi-body .progress-steps__nav button._active {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+html body .bvi-body .progress-steps__nav:before {
+  background-color: rgb(209, 210, 212) !important;
+}
+html body .bvi-body .progress-steps__line {
+  background-color: #000000 !important;
+}
+html body .bvi-body .button-full:disabled {
+  background-color: #d1d2d4 !important;
+}
+html body .bvi-body .maps-contacts {
+  display: none;
+}
+html body .bvi-body .our-competencies__icon {
+  display: none;
+}
+
+html body .bvi-body[data-bvi-theme=black] .side-menu > li.active > a {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+@media (max-width: 768px) {
+  html body .bvi-body[data-bvi-theme=black] .form-news__header {
+    border-bottom: 1px solid #ffffff !important;
+  }
+}
+html body .bvi-body[data-bvi-theme=black] .item-category input:checked + .item-category__label {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+html body .bvi-body[data-bvi-theme=black] .item-category__label:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+html body .bvi-body[data-bvi-theme=black] .tabs .nav.nav-tabs li.active a {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+html body .bvi-body[data-bvi-theme=black] .item-accordion-1__head_icon {
+  background-color: #ffffff !important;
+}
+html body .bvi-body[data-bvi-theme=black] .item-accordion-1__head_icon i {
+  background-color: #ffffff !important;
+}
+html body .bvi-body[data-bvi-theme=black] .item-accordion-1__head_icon i:before {
+  color: #000000 !important;
+}
+html body .bvi-body[data-bvi-theme=black] .progress-steps__nav button {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+html body .bvi-body[data-bvi-theme=black] .progress-steps__nav button._active {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+html body .bvi-body[data-bvi-theme=black] .progress-steps__nav:before {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+html body .bvi-body[data-bvi-theme=black] .progress-steps__line {
+  background-color: #ffffff !important;
 }
 
 /*# sourceMappingURL=bvi.css.map */

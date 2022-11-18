@@ -423,7 +423,7 @@
 
                 $("img").each(function () {
                     $(this).hide();
-                    //$(this).removeClass("bvi-background-image");
+                    $(this).removeClass("bvi-background-image");
                     var alt = this.alt || 'Изображение';
                     var imgClass = $(this).attr("class") || 'bvi-class-none';
                     var imgId = $(this).attr("id") || 'bvi-id-none';
